@@ -1,0 +1,89 @@
+//
+//  AddContactViewController.swift
+//  Polara
+//
+//  Created by Carson Buckley on 5/16/19.
+//  Copyright © 2019 Foundry. All rights reserved.
+//
+
+import UIKit
+
+class AddContactViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var phoneNumberTextfield: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    var contacts: [String] = []
+    
+    let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        formatKeyboard()
+        phoneNumberTextfield.delegate = self
+        saveButton.layer.cornerRadius = 3
+        saveButton.layer.borderWidth = 1.5
+        saveButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
+        let barButton = UIBarButtonItem(customView: activityIndicator)
+        self.navigationItem.setRightBarButton(barButton, animated: true)
+        // Do any additional setup after loading the view.
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func errorButton() {
+        UIView.animate(withDuration: 0.3) {
+            self.saveButton.layer.borderColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+            self.saveButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            self.infoLabel.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+            self.infoLabel.text = "Nobody in the Polara Database is associated with that phone number"
+            self.activityIndicator.stopAnimating()
+        }
+    }
+    
+    func formatKeyboard() {
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
+            guard let userInfo = notification.userInfo,
+                let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+            self.bottomConstraint.constant = keyboardFrame.height
+            self.view.layoutSubviews()
+            let frameInContentView = self.phoneNumberTextfield.convert(self.phoneNumberTextfield.bounds, to: self.contentView)
+            let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
+            self.scrollView.setContentOffset(offSetPoint, animated: true)
+        }
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
+            self.bottomConstraint.constant = 0
+        }
+        scrollView.keyboardDismissMode = .onDrag
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let addedPhoneNumber = phoneNumberTextfield.text, !addedPhoneNumber.isEmpty else { return }
+        PersonController.sharedInstance.searchForContact(phoneNumber: addedPhoneNumber) { (person) in
+            self.activityIndicator.startAnimating()
+            PersonController.sharedInstance.addContactToUser(person: person, completion: { (success) in
+                PersonController.sharedInstance.addCurrentUser(to: person, completion: { (success) in
+                    if success {
+                        print("SUCCESS SEARCHING AND SAVING USER ✅✅✅✅✅")
+                        self.navigationController?.popViewController(animated: true)
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        print("FAILED TO SAVE USER ❌❌❌❌❌")
+                        self.errorButton()
+                    }
+                })
+            })
+        }
+    }
+}
