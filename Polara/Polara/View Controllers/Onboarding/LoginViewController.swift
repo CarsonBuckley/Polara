@@ -21,6 +21,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        
+        // TO PREVENT CURRENT VC [LoginScreenViewController] FROM PRESENTING MODALLY, SIMPLY GO TO STORYBOARD, CLICK ON DESIRED VC, GO TO ATTRIBUTE INSPECTOR, AND LOCATE PRESENTATION -> SELECT FULLSCREEN
         super.viewDidLoad()
         formatKeyboard()
         emailTextfield.delegate = self
@@ -32,6 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         signUpButton.layer.borderWidth = 1.5
         signUpButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         isModalInPresentation = true
+        
         // Do any additional setup after loading the view.
     }
     
@@ -84,6 +87,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if success {
                     print("SUCCESS LOGGING IN USER ✅✅✅✅✅")
                     let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBar")
+                    
+                    // Line below is important after iOS 13 update. It allows the current View Controller [LoginViewController] to segue to desination VC [MenuViewController] without making the destinationVC present Modally
+                    mainVC.modalPresentationStyle = .fullScreen
                     self.present(mainVC, animated: true)
                     self.activityIndicator.stopAnimating()
                     return

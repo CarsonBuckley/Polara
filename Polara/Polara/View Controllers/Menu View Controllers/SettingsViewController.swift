@@ -98,9 +98,10 @@ class SettingsViewController: UIViewController {
         self.activityIndicator.startAnimating()
         PersonController.sharedInstance.signOutUser(completion: { (success) in
             if success {
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let loginScreen = storyBoard.instantiateViewController(withIdentifier: "loginScreen")
-                self.present(loginScreen, animated: true)
+                let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
+                // Line below is important after iOS 13 update. It allows the current View Controller [SettingsScreenViewController] to segue to desination VC [LoginViewController] without making the destinationVC present Modally
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true)
             }
         })
     }

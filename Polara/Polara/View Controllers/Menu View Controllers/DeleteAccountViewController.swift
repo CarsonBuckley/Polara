@@ -35,9 +35,10 @@ class DeleteAccountViewController: UIViewController {
         PersonController.sharedInstance.deleteUser(user: user, currentUser: person) { (success) in
             if success {
                 print("SUCCESS DELETING USER ✅✅✅✅✅")
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let loginScreen = storyBoard.instantiateViewController(withIdentifier: "loginScreen")
-                self.present(loginScreen, animated: true)
+                let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
+                // Line below is important after iOS 13 update. It allows the current View Controller [DeleteAccountViewController] to segue to desination VC [LoginViewController] without making the destinationVC present Modally
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true)
             } else {
                 print("FAILED TO DELETE USER ❌❌❌❌❌")
                 UIView.animate(withDuration: 0.3) {
