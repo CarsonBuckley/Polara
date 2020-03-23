@@ -100,6 +100,9 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         PersonController.sharedInstance.createAccount(name: name, email: email, password: password) { (success) in
             if success {
                 let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBar")
+                
+                // Line below is important after iOS 13 update. It allows the current View Controller [CreateAccountViewController] to segue to desination VC [MenuViewController] without making the destinationVC present Modally
+                mainVC.modalPresentationStyle = .fullScreen
                 self.present(mainVC, animated: true)
                 self.activityIndicator.stopAnimating()
             }

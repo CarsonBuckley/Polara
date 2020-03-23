@@ -29,6 +29,8 @@ class SplashScreenViewController: UIViewController {
                 if success {
                     print("SUCCESS LOGGING IN USER ✅✅✅✅✅")
                     let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBar")
+                    
+                    // Line below is important after iOS 13 update. It allows the current Modal View controller [SplashScreenViewController] to segue to desination VC [MenuViewController] without making the destinationVC present Modally
                     mainVC.modalPresentationStyle = .fullScreen
                     self.present(mainVC, animated: true)
                     return
@@ -36,7 +38,11 @@ class SplashScreenViewController: UIViewController {
             })
         } else {
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "toLoginVC", sender: nil)
+                let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
+                // Line below is important after iOS 13 update. It allows the current View Controller [SplashScreenViewController] to segue to desination VC [LoginViewController] without making the destinationVC present Modally
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true)
+                //self.performSegue(withIdentifier: "toLoginVC", sender: nil)
             }
         }
     }
