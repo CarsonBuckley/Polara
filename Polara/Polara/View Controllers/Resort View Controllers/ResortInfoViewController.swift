@@ -31,6 +31,7 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationItem.title = resort.name.uppercased()
         resortNameLabel.text = resort.name
         resortLocationLabel.text = resort.location + ", UT"
+        resortLocationLabel.textColor = UIColor.white
         distanceLabel.isHidden = true
         temperatureLabel.isHidden = true
         //temperatureLabel.text = "\(resort.temperature)°"
