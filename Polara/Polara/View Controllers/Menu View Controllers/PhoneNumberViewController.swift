@@ -13,10 +13,6 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneNumberTextfield: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var contacts: [String] = []
     
@@ -28,7 +24,7 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
         phoneNumberTextfield.text = user.phoneNumber
         saveButton.layer.cornerRadius = 3
         saveButton.layer.borderWidth = 1.5
-        saveButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        saveButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -44,16 +40,16 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
             guard let userInfo = notification.userInfo,
                 let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-            self.bottomConstraint.constant = keyboardFrame.height
+            //self.bottomConstraint.constant = keyboardFrame.height
             self.view.layoutSubviews()
-            let frameInContentView = self.phoneNumberTextfield.convert(self.phoneNumberTextfield.bounds, to: self.contentView)
-            let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
-            self.scrollView.setContentOffset(offSetPoint, animated: true)
+            //let frameInContentView = self.phoneNumberTextfield.convert(self.phoneNumberTextfield.bounds, to: self.contentView)
+            //let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
+            //self.scrollView.setContentOffset(offSetPoint, animated: true)
         }
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
-            self.bottomConstraint.constant = 0
+            //self.bottomConstraint.constant = 0
         }
-        scrollView.keyboardDismissMode = .onDrag
+        //scrollView.keyboardDismissMode = .onDrag
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -70,10 +66,5 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
                 print("FAILED TO SAVE UPDATED PHONENUMBER ❌❌❌❌❌")
             }
         }
-    }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
     }
 }

@@ -19,7 +19,6 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var deleteAccountButton: UIButton!
-    @IBOutlet weak var privacyPolicyButton: UIButton!
     
     let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
     

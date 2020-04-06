@@ -15,7 +15,6 @@ class DeleteAccountViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var deleteAccountButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +46,5 @@ class DeleteAccountViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
     }
 }

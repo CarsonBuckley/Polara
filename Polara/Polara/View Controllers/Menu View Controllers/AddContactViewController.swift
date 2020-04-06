@@ -13,9 +13,6 @@ class AddContactViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneNumberTextfield: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var contacts: [String] = []
     
@@ -56,16 +53,16 @@ class AddContactViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
             guard let userInfo = notification.userInfo,
                 let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-            self.bottomConstraint.constant = keyboardFrame.height
+            //self.bottomConstraint.constant = keyboardFrame.height
             self.view.layoutSubviews()
-            let frameInContentView = self.phoneNumberTextfield.convert(self.phoneNumberTextfield.bounds, to: self.contentView)
-            let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
-            self.scrollView.setContentOffset(offSetPoint, animated: true)
+            //let frameInContentView = self.phoneNumberTextfield.convert(self.phoneNumberTextfield.bounds, to: self.contentView)
+            //let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
+            //self.scrollView.setContentOffset(offSetPoint, animated: true)
         }
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
-            self.bottomConstraint.constant = 0
+            //self.bottomConstraint.constant = 0
         }
-        scrollView.keyboardDismissMode = .onDrag
+        //scrollView.keyboardDismissMode = .onDrag
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

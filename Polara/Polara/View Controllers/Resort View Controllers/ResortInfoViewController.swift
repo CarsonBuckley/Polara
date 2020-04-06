@@ -29,14 +29,15 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         guard let resort = resort else { return }
         self.navigationItem.title = resort.name//.uppercased()
+        resortNameLabel.isHidden = true
         resortNameLabel.text = resort.name
         resortLocationLabel.text = resort.location + ", UT"
         resortLocationLabel.textColor = UIColor.white
         distanceLabel.isHidden = true
         temperatureLabel.isHidden = true
         //temperatureLabel.text = "\(resort.temperature)°"
-        resortImage.image = UIImage(named: resort.name)
-        resortImage.layer.cornerRadius = resortImage.frame.height / 2
+        resortImage.image = UIImage(named: "\(resort.name) Cell")
+        resortImage.layer.cornerRadius = 10
         createTripButton.layer.cornerRadius = 3
         createTripButton.layer.borderWidth = 1.5
         createTripButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
