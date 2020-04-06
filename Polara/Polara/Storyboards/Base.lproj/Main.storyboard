@@ -87,21 +87,22 @@
             <objects>
                 <navigationController id="xRD-az-1fG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MENU" image="Glyph Account" id="LBt-DS-D2r"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="mkM-Wh-mZY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="mkM-Wh-mZY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="darkMode"/>
                         <color key="tintColor" name="iceBlue"/>
                         <color key="barTintColor" name="darkMode"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="QkE-JE-jgk" kind="relationship" relationship="rootViewController" id="B6u-zt-gj0"/>
+                        <segue destination="QkE-JE-jgk" kind="relationship" relationship="rootViewController" id="dSb-fe-yoe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyf-R7-MY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,33 +112,34 @@
         <!--RESORTS-->
         <scene sceneID="YZV-hu-u3L">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wYA-f2-ocY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="currentContext" id="wYA-f2-ocY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="RESORTS" image="Glyph Resort" id="rNf-tL-vsA"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="dWf-v4-BFb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="dWf-v4-BFb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="darkMode"/>
                         <color key="tintColor" name="iceBlue"/>
                         <color key="barTintColor" name="darkMode"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="TFD-l9-Q0Z" kind="relationship" relationship="rootViewController" id="vFB-ZC-cch"/>
+                        <segue destination="TFD-l9-Q0Z" kind="relationship" relationship="rootViewController" id="l67-so-t83"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaM-sa-jUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="134.59821428571428"/>
         </scene>
-        <!--RESORTS-->
+        <!--Resorts-->
         <scene sceneID="mjf-XG-FMt">
             <objects>
                 <tableViewController storyboardIdentifier="resortsVC" id="TFD-l9-Q0Z" customClass="ResortsTableViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
@@ -148,37 +150,31 @@
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resortCell" rowHeight="284" id="gex-cC-7pp" customClass="ResortTableViewCell" customModule="Polara" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="284"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resortCell" rowHeight="120" id="gex-cC-7pp" customClass="ResortTableViewCell" customModule="Polara" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gex-cC-7pp" id="C3L-nt-ia7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="284"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-b3-2sM">
-                                            <rect key="frame" x="348.5" y="11" width="45.5" height="35"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="30"/>
-                                            <color key="textColor" name="iceBlue"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alta" translatesAutoresizingMaskIntoConstraints="NO" id="r9t-Ug-Zfa">
-                                            <rect key="frame" x="131" y="27" width="152" height="152"/>
+                                            <rect key="frame" x="20" y="22.5" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="152" id="dIS-AS-Y6d"/>
-                                                <constraint firstAttribute="width" constant="152" id="ix5-lk-CjO"/>
+                                                <constraint firstAttribute="width" constant="75" id="6a0-nZ-kE5"/>
+                                                <constraint firstAttribute="height" constant="75" id="XU7-hL-twk"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X87-gh-MN6">
-                                            <rect key="frame" x="36" y="195" width="342" height="62"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="X87-gh-MN6">
+                                            <rect key="frame" x="103" y="30" width="200" height="60"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-ew-rwC">
-                                                    <rect key="frame" x="68.5" y="0.0" width="205.5" height="34"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="35"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="34"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPo-2V-bPx">
-                                                    <rect key="frame" x="79.5" y="42" width="183" height="20"/>
+                                                    <rect key="frame" x="0.0" y="40" width="183" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clf-n3-kBg">
                                                             <rect key="frame" x="0.0" y="0.0" width="121" height="20"/>
@@ -196,16 +192,20 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-b3-2sM">
+                                            <rect key="frame" x="362" y="65.5" width="32" height="24.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                                            <color key="textColor" name="iceBlue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="r9t-Ug-Zfa" firstAttribute="centerX" secondItem="C3L-nt-ia7" secondAttribute="centerX" id="75Y-Gn-JYv"/>
-                                        <constraint firstItem="K4R-b3-2sM" firstAttribute="trailing" secondItem="C3L-nt-ia7" secondAttribute="trailingMargin" id="J2h-tn-tfZ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="X87-gh-MN6" secondAttribute="bottom" constant="16" id="Pz7-BH-5ew"/>
-                                        <constraint firstItem="X87-gh-MN6" firstAttribute="top" secondItem="r9t-Ug-Zfa" secondAttribute="bottom" constant="16" id="S7P-Hi-sMm"/>
-                                        <constraint firstItem="X87-gh-MN6" firstAttribute="leading" secondItem="C3L-nt-ia7" secondAttribute="leadingMargin" constant="16" id="TYP-u9-zVg"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="X87-gh-MN6" secondAttribute="trailing" constant="16" id="VHW-L8-xqr"/>
-                                        <constraint firstItem="K4R-b3-2sM" firstAttribute="top" secondItem="C3L-nt-ia7" secondAttribute="topMargin" id="dgP-Rd-BHM"/>
-                                        <constraint firstItem="r9t-Ug-Zfa" firstAttribute="top" secondItem="C3L-nt-ia7" secondAttribute="topMargin" constant="16" id="fXE-jG-zUJ"/>
+                                        <constraint firstItem="X87-gh-MN6" firstAttribute="leading" secondItem="r9t-Ug-Zfa" secondAttribute="trailing" constant="8" id="FJh-Ts-4Mv"/>
+                                        <constraint firstItem="X87-gh-MN6" firstAttribute="centerY" secondItem="C3L-nt-ia7" secondAttribute="centerY" id="FMj-5x-3TH"/>
+                                        <constraint firstItem="r9t-Ug-Zfa" firstAttribute="centerY" secondItem="C3L-nt-ia7" secondAttribute="centerY" id="QJz-xx-4B0"/>
+                                        <constraint firstItem="K4R-b3-2sM" firstAttribute="trailing" secondItem="C3L-nt-ia7" secondAttribute="trailingMargin" id="Y1t-dw-t6l"/>
+                                        <constraint firstItem="K4R-b3-2sM" firstAttribute="bottom" secondItem="X87-gh-MN6" secondAttribute="bottom" id="caD-Pr-tqK"/>
+                                        <constraint firstItem="r9t-Ug-Zfa" firstAttribute="leading" secondItem="C3L-nt-ia7" secondAttribute="leadingMargin" id="o1U-xG-mRd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -224,7 +224,7 @@
                             <outlet property="delegate" destination="TFD-l9-Q0Z" id="4hP-sJ-9Pk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="RESORTS" id="vaT-mS-ZIl">
+                    <navigationItem key="navigationItem" title="Resorts" id="vaT-mS-ZIl">
                         <barButtonItem key="backBarButtonItem" title=" " id="S2V-f7-ZBj"/>
                     </navigationItem>
                 </tableViewController>
@@ -237,8 +237,8 @@
             <objects>
                 <navigationController storyboardIdentifier="tripsNavigationController" id="rZZ-J1-2Uh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="TRIPS" image="Glyph Points" id="sOP-eE-sKd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Ksu-xx-QHH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="Ksu-xx-QHH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="darkMode"/>
                         <color key="tintColor" name="iceBlue"/>
@@ -255,16 +255,16 @@
             </objects>
             <point key="canvasLocation" x="100" y="911"/>
         </scene>
-        <!--MENU-->
+        <!--Menu-->
         <scene sceneID="QCy-4n-Vh8">
             <objects>
                 <viewController storyboardIdentifier="mainMenu" id="QkE-JE-jgk" customClass="MenuViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Wv-rI-d5t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-qc-L4W">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-tB-taH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="520"/>
@@ -351,7 +351,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ES0-17-F9E"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MENU" id="6sY-vl-flJ">
+                    <navigationItem key="navigationItem" title="Menu" id="6sY-vl-flJ">
                         <barButtonItem key="backBarButtonItem" title=" " id="fgb-co-Tkx"/>
                         <barButtonItem key="rightBarButtonItem" image="Glyph Settings" id="ufL-Uj-tTB">
                             <color key="tintColor" name="iceBlue"/>
@@ -371,16 +371,16 @@
             </objects>
             <point key="canvasLocation" x="803" y="-1341"/>
         </scene>
-        <!--SETTINGS-->
+        <!--Settings-->
         <scene sceneID="Mjx-89-DDq">
             <objects>
                 <viewController id="rwi-hj-nh7" customClass="SettingsViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mqm-0s-DPB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBe-nw-702">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szG-ai-qnk">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
@@ -512,7 +512,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vNe-zk-8Xr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SETTINGS" id="Prf-dS-oue">
+                    <navigationItem key="navigationItem" title="Settings" id="Prf-dS-oue">
                         <barButtonItem key="backBarButtonItem" title=" " id="cQh-pW-GqQ"/>
                     </navigationItem>
                     <connections>
@@ -1251,16 +1251,16 @@
             </objects>
             <point key="canvasLocation" x="-2897.1014492753625" y="803.57142857142856"/>
         </scene>
-        <!--RESORT NAME-->
+        <!--Resort Name-->
         <scene sceneID="CdR-9h-g6o">
             <objects>
                 <viewController id="G9N-qa-uts" customClass="ResortInfoViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ROg-hd-W10">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boh-Uy-9By">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTF-fw-CHP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
@@ -1351,7 +1351,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ohY-vO-Jai"/>
                     </view>
-                    <navigationItem key="navigationItem" title="RESORT NAME" id="OEY-aG-CCO">
+                    <navigationItem key="navigationItem" title="Resort Name" id="OEY-aG-CCO">
                         <barButtonItem key="backBarButtonItem" title=" " id="6vs-o2-S7W"/>
                     </navigationItem>
                     <connections>
@@ -1367,12 +1367,12 @@
             </objects>
             <point key="canvasLocation" x="1586" y="135"/>
         </scene>
-        <!--RESORT NAME TRIP-->
+        <!--Resort Name Trip-->
         <scene sceneID="Kcb-4K-t4D">
             <objects>
                 <viewController storyboardIdentifier="createTripVC" id="0LL-Gv-RPg" customClass="CreateTripViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VQ7-iz-HXu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Mci-We-Tuk">
@@ -1381,7 +1381,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ype-iD-KCH">
-                                <rect key="frame" x="0.0" y="296" width="414" height="429"/>
+                                <rect key="frame" x="0.0" y="296" width="414" height="377"/>
                                 <color key="backgroundColor" name="darkMode"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -1415,7 +1415,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2MA-9x-xbH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="RESORT NAME TRIP" id="c1p-Xh-tO4">
+                    <navigationItem key="navigationItem" title="Resort Name Trip" id="c1p-Xh-tO4">
                         <barButtonItem key="backBarButtonItem" title=" " id="Bwp-Xy-g62"/>
                     </navigationItem>
                     <connections>
@@ -1453,16 +1453,16 @@
             </objects>
             <point key="canvasLocation" x="3172" y="134"/>
         </scene>
-        <!--TRIPS-->
+        <!--Trips-->
         <scene sceneID="b5u-D1-GMl">
             <objects>
                 <viewController storyboardIdentifier="upcomingTripsVC" id="zv9-ov-yI4" customClass="UpcomingTripsViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EMm-TL-U2n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dfx-Ef-VR9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <color key="backgroundColor" name="darkMode"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -1480,7 +1480,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RCJ-mn-NeI"/>
                     </view>
-                    <navigationItem key="navigationItem" title="TRIPS" id="964-EA-6ci">
+                    <navigationItem key="navigationItem" title="Trips" id="964-EA-6ci">
                         <barButtonItem key="backBarButtonItem" title=" " id="n58-Nn-5BV"/>
                     </navigationItem>
                     <connections>
@@ -1528,16 +1528,16 @@
             </objects>
             <point key="canvasLocation" x="1585.5072463768117" y="908.70535714285711"/>
         </scene>
-        <!--CONTACTS-->
+        <!--Contacts-->
         <scene sceneID="7n2-Ze-1lF">
             <objects>
                 <viewController storyboardIdentifier="contactVC" id="esm-uu-wii" customClass="ContactsViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xhp-vN-sih">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8mI-GR-VCg">
-                                <rect key="frame" x="0.0" y="84" width="414" height="641"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="589"/>
                                 <color key="backgroundColor" name="darkMode"/>
                                 <connections>
                                     <outlet property="dataSource" destination="esm-uu-wii" id="8gj-Ju-HPk"/>
@@ -1567,7 +1567,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="raM-bJ-dDe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CONTACTS" id="UCV-XA-Fg2">
+                    <navigationItem key="navigationItem" title="Contacts" id="UCV-XA-Fg2">
                         <barButtonItem key="backBarButtonItem" title=" " id="MIi-JB-Erp"/>
                     </navigationItem>
                     <connections>
@@ -1579,16 +1579,16 @@
             </objects>
             <point key="canvasLocation" x="1502.8985507246377" y="-1341.2946428571429"/>
         </scene>
-        <!--ADD CONTACT-->
+        <!--Add Contact-->
         <scene sceneID="caT-Fx-FkJ">
             <objects>
                 <viewController id="gfz-LR-T7y" customClass="AddContactViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mcb-HW-fb7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCw-vP-Psi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2Q-rj-Qfg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
@@ -1666,7 +1666,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vRz-En-gfm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ADD CONTACT" id="OSf-uE-cKK"/>
+                    <navigationItem key="navigationItem" title="Add Contact" id="OSf-uE-cKK"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="p8V-Ha-n7o" id="GBt-lz-jmG"/>
                         <outlet property="contentView" destination="u2Q-rj-Qfg" id="huA-Ym-cEw"/>
@@ -1680,12 +1680,12 @@
             </objects>
             <point key="canvasLocation" x="2224.6376811594205" y="-1341.2946428571429"/>
         </scene>
-        <!--NOTIFICATIONS-->
+        <!--Notifications-->
         <scene sceneID="NGQ-TQ-FpK">
             <objects>
                 <tableViewController storyboardIdentifier="notificationVC" id="iLb-g7-Ye4" customClass="NotificationsTableViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TS4-fh-vBK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="darkMode"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1695,7 +1695,7 @@
                             <outlet property="delegate" destination="iLb-g7-Ye4" id="cT9-Xo-Lck"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NOTIFICATIONS" id="c6X-g8-8Ty">
+                    <navigationItem key="navigationItem" title="Notifications" id="c6X-g8-8Ty">
                         <barButtonItem key="backBarButtonItem" title=" " id="kdm-Ik-hYe"/>
                     </navigationItem>
                 </tableViewController>

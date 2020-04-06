@@ -34,7 +34,7 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.navigationItem.title = resort!.name.uppercased()
+        self.navigationItem.title = resort!.name//.uppercased()
         guard let user = PersonController.sharedInstance.currentUser else { return }
         PersonController.sharedInstance.fetchContacts(contact: user, firebaseUID: user.firebaseUID) { (success) in
             if success {

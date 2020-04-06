@@ -48,10 +48,10 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
         return ResortController.sharedInstance.resorts.count
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let height = self.view.frame.height / 3
-//        return height
-//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = self.view.frame.height / 5
+        return height
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resortCell", for: indexPath) as! ResortTableViewCell

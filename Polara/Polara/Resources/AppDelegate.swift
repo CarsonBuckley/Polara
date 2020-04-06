@@ -18,12 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let attrs = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 17)!
+//        let attrs = [
+//            NSAttributedString.Key.foregroundColor: UIColor.white,
+//            NSAttributedString.Key.font: UIFont(name: "Roboto", size: 17)!
+//        ]
+//
+//        UINavigationBar.appearance().titleTextAttributes = attrs
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "Roboto-Black", size: 17)!,
+            NSAttributedString.Key.foregroundColor: UIColor.white
         ]
-
-        UINavigationBar.appearance().titleTextAttributes = attrs
         
         FirebaseApp.configure()
         

@@ -28,7 +28,7 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let resort = resort else { return }
-        self.navigationItem.title = resort.name.uppercased()
+        self.navigationItem.title = resort.name//.uppercased()
         resortNameLabel.text = resort.name
         resortLocationLabel.text = resort.location + ", UT"
         resortLocationLabel.textColor = UIColor.white
