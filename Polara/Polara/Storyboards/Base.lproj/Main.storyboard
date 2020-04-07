@@ -193,8 +193,8 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-b3-2sM">
-                                            <rect key="frame" x="362" y="65.5" width="32" height="24.5"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                                            <rect key="frame" x="368" y="70" width="26" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                             <color key="textColor" name="iceBlue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1112,7 +1112,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLf-B1-159">
-                                <rect key="frame" x="130" y="344.5" width="154" height="52"/>
+                                <rect key="frame" x="240" y="255" width="154" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ntV-6W-zts"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                                 <state key="normal" title="CREATE A TRIP">
@@ -1122,23 +1125,17 @@
                                     <segue destination="0LL-Gv-RPg" kind="show" identifier="toCreateTripVC" id="NX3-6G-ayp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7r-KQ-oXL">
-                                <rect key="frame" x="104.5" y="404.5" width="205.5" height="41"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pg-AF-Tn9">
-                                <rect key="frame" x="20" y="255" width="241" height="25.5"/>
+                                <rect key="frame" x="20" y="255" width="185" height="25.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-0u-ESq">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="25.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-0u-ESq">
+                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="25.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ● 20 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-PJ-isZ">
-                                        <rect key="frame" x="156" y="0.0" width="85" height="25.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" • 20 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-PJ-isZ">
+                                        <rect key="frame" x="110.5" y="0.0" width="74.5" height="25.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -1152,25 +1149,31 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-KM-u5O">
-                                <rect key="frame" x="348.5" y="255" width="45.5" height="35"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="30"/>
+                                <rect key="frame" x="20" y="288.5" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" name="iceBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7r-KQ-oXL">
+                                <rect key="frame" x="20" y="332.5" width="210" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1pg-AF-Tn9" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="4Tb-Jq-umg"/>
-                            <constraint firstItem="Qhb-KM-u5O" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="CcM-lC-USN"/>
+                            <constraint firstItem="iLf-B1-159" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="4iH-Uq-fXO"/>
+                            <constraint firstItem="Qhb-KM-u5O" firstAttribute="top" secondItem="1pg-AF-Tn9" secondAttribute="bottom" constant="8" id="5zv-lq-4Ke"/>
+                            <constraint firstItem="e7r-KQ-oXL" firstAttribute="top" secondItem="Qhb-KM-u5O" secondAttribute="bottom" constant="8" id="9tQ-bJ-Y2j"/>
                             <constraint firstItem="WoE-mh-ERl" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="Qwl-yg-cLg"/>
-                            <constraint firstItem="e7r-KQ-oXL" firstAttribute="centerX" secondItem="ROg-hd-W10" secondAttribute="centerX" id="RFo-4D-XYy"/>
+                            <constraint firstItem="Qhb-KM-u5O" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="SHZ-Kk-K1Q"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="WoE-mh-ERl" secondAttribute="trailing" constant="20" id="UVf-AB-Wzk"/>
-                            <constraint firstItem="e7r-KQ-oXL" firstAttribute="top" secondItem="iLf-B1-159" secondAttribute="bottom" constant="8" id="i8F-Q2-WAv"/>
+                            <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="iLf-B1-159" secondAttribute="trailing" constant="20" id="Zlv-T8-nYP"/>
                             <constraint firstItem="1pg-AF-Tn9" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="kG8-4F-J9G"/>
-                            <constraint firstItem="iLf-B1-159" firstAttribute="top" secondItem="1pg-AF-Tn9" secondAttribute="bottom" constant="64" id="kuA-cO-upQ"/>
                             <constraint firstItem="WoE-mh-ERl" firstAttribute="top" secondItem="ohY-vO-Jai" secondAttribute="top" constant="16" id="q9b-63-zec"/>
-                            <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="Qhb-KM-u5O" secondAttribute="trailing" constant="20" id="wbm-mF-Tdv"/>
-                            <constraint firstItem="iLf-B1-159" firstAttribute="centerX" secondItem="ROg-hd-W10" secondAttribute="centerX" id="wka-tm-0ow"/>
+                            <constraint firstItem="e7r-KQ-oXL" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="qoL-Nu-9zQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ohY-vO-Jai"/>
                     </view>
