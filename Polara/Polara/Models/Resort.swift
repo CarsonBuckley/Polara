@@ -8,15 +8,26 @@
 
 import Foundation
 
-struct Resort {
+struct Resort: Codable {
     
     var name: String
     var location: String
     var temperature: Int
     
-    init(name: String, location: String, temperature: Int) {
-        self.name = name
-        self.location = location
-        self.temperature = temperature
+    enum CodingKeys: String, CodingKey {
+        
+        case name = "name"
+        case location = "location"
+        case temperature = "temperature"
     }
+    
+//    init(name: String, location: String, temperature: Int) {
+//        self.name = name
+//        self.location = location
+//        self.temperature = temperature
+//    }
+}
+
+struct ResortTopLevelDictionary: Codable {
+    let results: [Resort]
 }

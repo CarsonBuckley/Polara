@@ -1154,26 +1154,18 @@
                                 <color key="textColor" name="iceBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7r-KQ-oXL">
-                                <rect key="frame" x="20" y="332.5" width="210" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1pg-AF-Tn9" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="4Tb-Jq-umg"/>
                             <constraint firstItem="iLf-B1-159" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="4iH-Uq-fXO"/>
                             <constraint firstItem="Qhb-KM-u5O" firstAttribute="top" secondItem="1pg-AF-Tn9" secondAttribute="bottom" constant="8" id="5zv-lq-4Ke"/>
-                            <constraint firstItem="e7r-KQ-oXL" firstAttribute="top" secondItem="Qhb-KM-u5O" secondAttribute="bottom" constant="8" id="9tQ-bJ-Y2j"/>
                             <constraint firstItem="WoE-mh-ERl" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="Qwl-yg-cLg"/>
                             <constraint firstItem="Qhb-KM-u5O" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="SHZ-Kk-K1Q"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="WoE-mh-ERl" secondAttribute="trailing" constant="20" id="UVf-AB-Wzk"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="iLf-B1-159" secondAttribute="trailing" constant="20" id="Zlv-T8-nYP"/>
                             <constraint firstItem="1pg-AF-Tn9" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="kG8-4F-J9G"/>
                             <constraint firstItem="WoE-mh-ERl" firstAttribute="top" secondItem="ohY-vO-Jai" secondAttribute="top" constant="16" id="q9b-63-zec"/>
-                            <constraint firstItem="e7r-KQ-oXL" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="qoL-Nu-9zQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ohY-vO-Jai"/>
                     </view>
@@ -1185,7 +1177,6 @@
                         <outlet property="distanceLabel" destination="pZo-PJ-isZ" id="tJD-41-W1C"/>
                         <outlet property="resortImage" destination="WoE-mh-ERl" id="fKM-Ij-xSf"/>
                         <outlet property="resortLocationLabel" destination="cDw-0u-ESq" id="MMV-Xk-4R0"/>
-                        <outlet property="resortNameLabel" destination="e7r-KQ-oXL" id="Li7-Bo-3Cg"/>
                         <outlet property="temperatureLabel" destination="Qhb-KM-u5O" id="25q-fs-TVV"/>
                     </connections>
                 </viewController>
@@ -1254,30 +1245,36 @@
             </objects>
             <point key="canvasLocation" x="2347.826086956522" y="134.59821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Label View Controller-->
         <scene sceneID="a5m-Hv-xdl">
             <objects>
-                <viewController id="z4t-1Y-6pp" sceneMemberID="viewController">
+                <viewController id="z4t-1Y-6pp" customClass="LabelViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jBs-bV-YX8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q92-83-0J0">
-                                <rect key="frame" x="186" y="258" width="42" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q92-83-0J0">
+                                <rect key="frame" x="162" y="438" width="90" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q92-83-0J0" firstAttribute="centerX" secondItem="jBs-bV-YX8" secondAttribute="centerX" id="VVR-xD-yjC"/>
+                            <constraint firstItem="Q92-83-0J0" firstAttribute="centerY" secondItem="jBs-bV-YX8" secondAttribute="centerY" id="VnT-8W-nGw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yGa-Su-sTQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZWl-y4-496"/>
+                    <connections>
+                        <outlet property="label" destination="Q92-83-0J0" id="dr3-Nm-zs9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EH8-M3-gxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3172" y="134"/>
+            <point key="canvasLocation" x="3587" y="120"/>
         </scene>
         <!--Trips-->
         <scene sceneID="b5u-D1-GMl">
@@ -1394,7 +1391,7 @@
                         <viewLayoutGuide key="safeArea" id="raM-bJ-dDe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contacts" id="UCV-XA-Fg2">
-                        <barButtonItem key="backBarButtonItem" title=" " id="MIi-JB-Erp"/>
+                        <barButtonItem key="backBarButtonItem" id="MIi-JB-Erp"/>
                     </navigationItem>
                     <connections>
                         <outlet property="addContactButton" destination="BHj-8U-oUI" id="qhN-qd-b2o"/>

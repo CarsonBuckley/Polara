@@ -21,6 +21,7 @@
 		B92C0512228E0BBE00ABA42D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C0511228E0BBE00ABA42D /* ForgotPasswordViewController.swift */; };
 		B932E2A9228CCD1F006250D6 /* ResortInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932E2A8228CCD1F006250D6 /* ResortInfoViewController.swift */; };
 		B93AF03E22EF9734009A91BF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AF03D22EF9734009A91BF /* DateFormatter.swift */; };
+		B95B96FC243D03BC00920350 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B96FB243D03BC00920350 /* LabelViewController.swift */; };
 		B95CF4F8228B3F050050CE0F /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95CF4F7228B3F050050CE0F /* SplashScreenViewController.swift */; };
 		B9629983229321A400FFF94A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9629982229321A400FFF94A /* ContactsViewController.swift */; };
 		B967734D228E2D440020E398 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967734C228E2D440020E398 /* CreateAccountViewController.swift */; };
@@ -82,6 +83,7 @@
 		B92C0511228E0BBE00ABA42D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		B932E2A8228CCD1F006250D6 /* ResortInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortInfoViewController.swift; sourceTree = "<group>"; };
 		B93AF03D22EF9734009A91BF /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		B95B96FB243D03BC00920350 /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		B95CF4F7228B3F050050CE0F /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		B9629982229321A400FFF94A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		B967734C228E2D440020E398 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				B9629982229321A400FFF94A /* ContactsViewController.swift */,
 				B92C04FA228DF2A200ABA42D /* AddContactViewController.swift */,
 				B92C04FE228DF33000ABA42D /* NotificationsTableViewController.swift */,
+				B95B96FB243D03BC00920350 /* LabelViewController.swift */,
 			);
 			path = "Menu View Controllers";
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				B9677351228E4BFB0020E398 /* PhoneNumberViewController.swift in Sources */,
 				B967734F228E44560020E398 /* DeleteAccountViewController.swift in Sources */,
 				B9A87D72228F0A4400254A43 /* PrivacyPolicyViewController.swift in Sources */,
+				B95B96FC243D03BC00920350 /* LabelViewController.swift in Sources */,
 				B98E80CD2287C2D60077C50A /* robotoBoldLabel.swift in Sources */,
 				B93AF03E22EF9734009A91BF /* DateFormatter.swift in Sources */,
 				B971873B22868F8100CF1010 /* ResortTableViewCell.swift in Sources */,
