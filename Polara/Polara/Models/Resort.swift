@@ -12,12 +12,14 @@ struct Resort: Codable {
     
     var name: String
     var location: String
+    var coordinates: String
     var temperature: Int
     
     enum CodingKeys: String, CodingKey {
         
         case name = "name"
         case location = "location"
+        case coordinates = "geocode"
         case temperature = "temperature"
     }
     

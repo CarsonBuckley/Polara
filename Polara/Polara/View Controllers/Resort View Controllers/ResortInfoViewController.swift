@@ -32,7 +32,7 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         resortLocationLabel.textColor = UIColor.white
         distanceLabel.isHidden = true
         //temperatureLabel.isHidden = true
-        //temperatureLabel.text = "\(resort.temperature)°"
+        temperatureLabel.text = "\(resort.coordinates)°"
         resortImage.image = UIImage(named: "\(resort.name) Cell")
         resortImage.layer.cornerRadius = 10
         createTripButton.layer.cornerRadius = 3
