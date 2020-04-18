@@ -8,20 +8,37 @@
 
 import Foundation
 
-struct Resort: Codable {
+struct Resort {
     
     var name: String
     var location: String
     var coordinates: String
-    var temperature: Int
+    var temperature: String
     
-    enum CodingKeys: String, CodingKey {
-        
-        case name = "name"
-        case location = "location"
-        case coordinates = "geocode"
-        case temperature = "temperature"
-    }
+//    enum Temperature: String {
+//        case temperature = "temperature"
+//    }
+//
+//    init?(temperature: Resort.Temperature, dictionary: [String: Any]) {
+//        if temperature == .temperature {
+//
+//        guard let temperatureFromDictionary = dictionary["temperature"] as? String else { return nil }
+//
+//        self.temperature = temperatureFromDictionary
+//
+//        } else {
+//
+//        return nil
+//        }
+//    }
+    
+//    enum CodingKeys: String, CodingKey {
+//
+//        case name = "name"
+//        case location = "location"
+//        case coordinates = "geocode"
+//        case temperature = "temperature"
+//    }
     
 //    init(name: String, location: String, temperature: Int) {
 //        self.name = name
@@ -30,6 +47,6 @@ struct Resort: Codable {
 //    }
 }
 
-struct ResortTopLevelDictionary: Codable {
-    let results: [Resort]
-}
+//struct ResortTopLevelDictionary: Codable {
+//    let results: [Resort]
+//}

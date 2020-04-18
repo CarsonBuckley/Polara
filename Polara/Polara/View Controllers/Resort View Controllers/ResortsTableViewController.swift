@@ -21,7 +21,7 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
     }
     
     //From the CreateTripViewController
-    var fromCreate: Bool = false
+    var fromCreateVC: Bool = false
     
     //let locationManager = CLLocationManager()
     
@@ -32,9 +32,9 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if fromCreate == true {
+        if fromCreateVC == true {
             self.tabBarController?.selectedIndex = 2
-            fromCreate = false
+            fromCreateVC = false
         }
     }
     

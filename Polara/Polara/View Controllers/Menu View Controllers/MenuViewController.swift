@@ -26,6 +26,10 @@ class MenuViewController: UIViewController {
         notificationsButton.layer.cornerRadius = 3
         notificationsButton.layer.borderWidth = 1.5
         notificationsButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        let originalString = "test.test,test-test%2C"
+        let escapedString = originalString.addingPercentEncoding(withAllowedCharacters: .alphanumerics)
+        print(escapedString!)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
