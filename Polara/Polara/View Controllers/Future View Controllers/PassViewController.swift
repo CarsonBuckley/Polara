@@ -30,7 +30,7 @@ class PassViewController: UIViewController {
         guard let resort = resort else { return }
         resortNameLabel.text = resort.name
         resortLocationLabel.text = resort.location + ", UT"
-        temperatureLabel.text = "\(resort.temperature)°"
+        //temperatureLabel.text = "\(resort.temperature)°"
         resortImage.image = UIImage(named: resort.name)
         resortImage.layer.cornerRadius = resortImage.frame.height / 2
         seasonPassButton.layer.cornerRadius = 3

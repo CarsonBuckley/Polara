@@ -112,7 +112,7 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
                 })
                 DispatchQueue.main.async {
                     let mainVC = self.navigationController?.viewControllers.first as? ResortsTableViewController
-                    mainVC?.fromCreate = true
+                    mainVC?.fromCreateVC = true
                     self.navigationController?.popToRootViewController(animated: true)
                 }
                 print("SUCCESS CREATING TRIP ✅✅✅✅✅")

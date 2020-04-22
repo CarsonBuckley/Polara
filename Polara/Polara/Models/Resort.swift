@@ -13,40 +13,13 @@ struct Resort {
     var name: String
     var location: String
     var coordinates: String
-    var temperature: String
-    
-//    enum Temperature: String {
-//        case temperature = "temperature"
-//    }
-//
-//    init?(temperature: Resort.Temperature, dictionary: [String: Any]) {
-//        if temperature == .temperature {
-//
-//        guard let temperatureFromDictionary = dictionary["temperature"] as? String else { return nil }
-//
-//        self.temperature = temperatureFromDictionary
-//
-//        } else {
-//
-//        return nil
-//        }
-//    }
-    
-//    enum CodingKeys: String, CodingKey {
-//
-//        case name = "name"
-//        case location = "location"
-//        case coordinates = "geocode"
-//        case temperature = "temperature"
-//    }
-    
-//    init(name: String, location: String, temperature: Int) {
-//        self.name = name
-//        self.location = location
-//        self.temperature = temperature
-//    }
 }
 
-//struct ResortTopLevelDictionary: Codable {
-//    let results: [Resort]
-//}
+struct Temperature: Codable {
+    
+    let temperature: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case temperature = "temperature"
+    }
+}

@@ -27,7 +27,6 @@ class ResortTableViewCell: UITableViewCell {
         resortNameLabel.text = resort.name
         resortLocationLabel.text = resort.location + ", UT"
         resortImage.image = UIImage(named: "\(resort.name) Cell")
-        //resortImage.image = UIImage(named: "\(resort.name) Logo")
         distanceLabel.isHidden = true
         temperatureLabel.isHidden = true
         //temperatureLabel.text = "\(resort.temperature)°"

@@ -31,20 +31,21 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         resortLocationLabel.text = resort.location + ", UT"
         resortLocationLabel.textColor = UIColor.white
         distanceLabel.isHidden = true
-        //temperatureLabel.isHidden = true
-        temperatureLabel.text = "\(resort.coordinates)°"
         resortImage.image = UIImage(named: "\(resort.name) Cover")
         resortImage.layer.cornerRadius = 10
         createTripButton.layer.cornerRadius = 3
         createTripButton.layer.borderWidth = 1.5
         createTripButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
-        ResortController.fetchTemperature(with: resort.coordinates, units: "e", language: "en-US", format: "json", apiKey: "9d2908c81003444ea908c81003b44ed4") { (resort) in
-            guard let resort = resort else { print("Failed to fetch resort temperature ❌") ; return }
-            self.resort = resort
-            DispatchQueue.main.async {
-                self.loadView()
-            }
+        ResortController.sharedInstance.fetchTemperature(with: resort.coordinates, units: ResortController.sharedInstance.units, language: ResortController.sharedInstance.language, format: ResortController.sharedInstance.format, apiKey: ResortController.sharedInstance.apiKey) { (temperature) in
+            guard let temperature = temperature else { print("Failed to fetch resort temperature ❌") ; return }
+            self.setTemperatureLabel(temperature)
+        }
+    }
+    
+    func setTemperatureLabel(_ temperature: Temperature) {
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = "\(temperature.temperature)°"
         }
     }
         
