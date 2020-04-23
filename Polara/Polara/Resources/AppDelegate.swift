@@ -18,10 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UINavigationBarAppearance().titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 30)!,
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
+        
+        
+//        func setStatusBarBackgroundColor(color: UIColor) {
+//
+//            guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+//
+//            statusBar.backgroundColor = color
+//        }
+        
+//        UINavigationBarAppearance().titleTextAttributes = [
+//            NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 30)!,
+//            NSAttributedString.Key.foregroundColor: UIColor.white
+//        ]
         
         FirebaseApp.configure()
         

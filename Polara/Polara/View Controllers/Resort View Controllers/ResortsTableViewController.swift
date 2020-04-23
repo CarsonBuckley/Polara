@@ -39,7 +39,7 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .darkContent
     }
     
     // MARK: - Table view data source

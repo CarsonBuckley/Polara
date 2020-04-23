@@ -18,18 +18,14 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        referralCodeStackView.isHidden = true
-        notificationsButton.isHidden = true
         contactsButton.layer.cornerRadius = 3
         contactsButton.layer.borderWidth = 1.5
         contactsButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         notificationsButton.layer.cornerRadius = 3
         notificationsButton.layer.borderWidth = 1.5
         notificationsButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        let originalString = "test.test,test-test%2C"
-        let escapedString = originalString.addingPercentEncoding(withAllowedCharacters: .alphanumerics)
-        print(escapedString!)
+        notificationsButton.isHidden = true
+        referralCodeStackView.isHidden = true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
