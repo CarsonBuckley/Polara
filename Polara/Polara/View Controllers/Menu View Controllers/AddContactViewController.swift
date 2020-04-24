@@ -22,9 +22,10 @@ class AddContactViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         formatKeyboard()
         phoneNumberTextfield.delegate = self
-        saveButton.layer.cornerRadius = 3
-        saveButton.layer.borderWidth = 1.5
+        saveButton.layer.cornerRadius = 5
+        saveButton.layer.borderWidth = 3
         saveButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
+        saveButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         let barButton = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.setRightBarButton(barButton, animated: true)
         // Do any additional setup after loading the view.

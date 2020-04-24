@@ -47,8 +47,8 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         }
-        createTripButton.layer.cornerRadius = 3
-        createTripButton.layer.borderWidth = 1.5
+        createTripButton.layer.cornerRadius = 5
+        createTripButton.layer.borderWidth = 3
         createTripButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = .date

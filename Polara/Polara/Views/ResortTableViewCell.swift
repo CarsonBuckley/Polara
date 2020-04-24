@@ -9,7 +9,7 @@
 import UIKit
 
 class ResortTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var resortNameLabel: UILabel!
     @IBOutlet weak var resortLocationLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -28,15 +28,25 @@ class ResortTableViewCell: UITableViewCell {
         resortLocationLabel.text = resort.location + ", UT"
         resortImage.image = UIImage(named: "\(resort.name) Cell")
         distanceLabel.isHidden = true
-        temperatureLabel.isHidden = true
-        //temperatureLabel.text = "\(resort.temperature)°"
+        //temperatureLabel.isHidden = true
+        
+        ResortController.sharedInstance.fetchTemperature(with: resort.coordinates, units: ResortController.sharedInstance.units, language: ResortController.sharedInstance.language, format: ResortController.sharedInstance.format, apiKey: ResortController.sharedInstance.apiKey) { (temperature) in
+            guard let temperature = temperature else { print("Failed to fetch resort temperature ❌") ; return }
+            self.setTemperatureLabel(temperature)
+        }
+    }
+    
+    func setTemperatureLabel(_ temperature: Temperature) {
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = "\(temperature.temperature)°"
+        }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state

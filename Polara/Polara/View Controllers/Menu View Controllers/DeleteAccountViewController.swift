@@ -18,8 +18,8 @@ class DeleteAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        deleteAccountButton.layer.cornerRadius = 3
-        deleteAccountButton.layer.borderWidth = 1.5
+        deleteAccountButton.layer.cornerRadius = 5
+        deleteAccountButton.layer.borderWidth = 3
         deleteAccountButton.layer.borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
     }
     

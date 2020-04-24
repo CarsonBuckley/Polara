@@ -18,13 +18,13 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        formatKeyboard()
         phoneNumberTextfield.delegate = self
         guard let user = PersonController.sharedInstance.currentUser else { return }
         phoneNumberTextfield.text = user.phoneNumber
-        saveButton.layer.cornerRadius = 3
-        saveButton.layer.borderWidth = 1.5
+        saveButton.layer.cornerRadius = 5
+        saveButton.layer.borderWidth = 3
         saveButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
+        saveButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -34,22 +34,6 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    func formatKeyboard() {
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
-            guard let userInfo = notification.userInfo,
-                let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-            //self.bottomConstraint.constant = keyboardFrame.height
-            self.view.layoutSubviews()
-            //let frameInContentView = self.phoneNumberTextfield.convert(self.phoneNumberTextfield.bounds, to: self.contentView)
-            //let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
-            //self.scrollView.setContentOffset(offSetPoint, animated: true)
-        }
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
-            //self.bottomConstraint.constant = 0
-        }
-        //scrollView.keyboardDismissMode = .onDrag
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

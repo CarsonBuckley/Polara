@@ -33,17 +33,18 @@ class SettingsViewController: UIViewController {
         } else {
             addUpdateButton.setTitle("UPDATE", for: .normal)
         }
-        addUpdateButton.layer.cornerRadius = 3
-        addUpdateButton.layer.borderWidth = 1.5
+        addUpdateButton.layer.cornerRadius = 5
+        addUpdateButton.layer.borderWidth = 3
         addUpdateButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
-        changePasswordButton.layer.cornerRadius = 3
-        changePasswordButton.layer.borderWidth = 1.5
+        addUpdateButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        changePasswordButton.layer.cornerRadius = 5
+        changePasswordButton.layer.borderWidth = 3
         changePasswordButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        logOutButton.layer.cornerRadius = 3
-        logOutButton.layer.borderWidth = 1.5
+        logOutButton.layer.cornerRadius = 5
+        logOutButton.layer.borderWidth = 3
         logOutButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        deleteAccountButton.layer.cornerRadius = 3
-        deleteAccountButton.layer.borderWidth = 1.5
+        deleteAccountButton.layer.cornerRadius = 5
+        deleteAccountButton.layer.borderWidth = 3
         deleteAccountButton.layer.borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         let barButton = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.setRightBarButton(barButton, animated: true)

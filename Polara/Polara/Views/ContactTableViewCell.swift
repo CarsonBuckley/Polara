@@ -69,8 +69,8 @@ class ContactTableViewCell: UITableViewCell {
         
         contactNameLabel.text = contact.name
         contactPhoneNumberLabel.text = contact.phoneNumber
-        cellButton.layer.cornerRadius = 3
-        cellButton.layer.borderWidth = 1.5
+        cellButton.layer.cornerRadius = 5
+        cellButton.layer.borderWidth = 3
     }
     
     override func awakeFromNib() {

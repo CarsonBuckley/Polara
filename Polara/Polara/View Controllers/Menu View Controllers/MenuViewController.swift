@@ -18,8 +18,8 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactsButton.layer.cornerRadius = 3
-        contactsButton.layer.borderWidth = 1.5
+        contactsButton.layer.cornerRadius = 5
+        contactsButton.layer.borderWidth = 3
         contactsButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         notificationsButton.layer.cornerRadius = 3
         notificationsButton.layer.borderWidth = 1.5

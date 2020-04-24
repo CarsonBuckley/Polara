@@ -33,8 +33,8 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         distanceLabel.isHidden = true
         resortImage.image = UIImage(named: "\(resort.name) Cover")
         resortImage.layer.cornerRadius = 10
-        createTripButton.layer.cornerRadius = 3
-        createTripButton.layer.borderWidth = 1.5
+        createTripButton.layer.cornerRadius = 5
+        createTripButton.layer.borderWidth = 3
         createTripButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         ResortController.sharedInstance.fetchTemperature(with: resort.coordinates, units: ResortController.sharedInstance.units, language: ResortController.sharedInstance.language, format: ResortController.sharedInstance.format, apiKey: ResortController.sharedInstance.apiKey) { (temperature) in
