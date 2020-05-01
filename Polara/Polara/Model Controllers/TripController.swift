@@ -23,10 +23,10 @@ class TripController: Notification {
     var creatorOfTrip: Person?
     var trip: Trip?
     
-    func createTrip(resortName: String, resortLocation: String, date: Double, completion: @escaping (Bool) -> Void) {
+    func createTrip(resortName: String, resortLocation: String, resortState: String, date: Double, completion: @escaping (Bool) -> Void) {
         guard let currentUser = PersonController.sharedInstance.currentUser else { completion(false) ; return }
         let documentRef = db.document()
-        let newTrip = Trip(userID: currentUser.firebaseUID, id: documentRef.documentID, resortName: resortName, resortLocation: resortLocation, date: date, invitedContacts: currentUser.invitedUsersFirebase)
+        let newTrip = Trip(userID: currentUser.firebaseUID, id: documentRef.documentID, resortName: resortName, resortLocation: resortLocation, resortState: resortState, date: date, invitedContacts: currentUser.invitedUsersFirebase)
         
         self.trip = newTrip
         scheduleUserNotification(for: newTrip)
@@ -53,7 +53,7 @@ class TripController: Notification {
             self.trips.removeAll()
             for document in snapshots!.documents {
                 guard let trip = Trip(dictionary: document.data()) else { print("❌"); return }
-                if trip.date > Date().timeIntervalSince1970 {
+                if trip.date >= Date().timeIntervalSince1970 {
                     self.trips.append(trip)
                 }
                 self.trips.sort(by: { $0.date < $1.date })
@@ -63,23 +63,23 @@ class TripController: Notification {
         }
     }
     
-    func fetchAllTrips(completion: @escaping (Bool) -> Void) {
-        Firestore.firestore().collection("trips").getDocuments { (snapshots, error) in
-            if let error = error {
-                print("THERE WAS AN ERROR FETCHING USER: \(error.localizedDescription) ❌❌❌❌❌")
-                completion(false)
-                return
-            }
-            self.trips.removeAll()
-            for document in snapshots!.documents {
-                guard let trip = Trip(dictionary: document.data()) else { print("❌"); return }
-                self.trips.append(trip)
-                self.trips.sort(by: { $0.date < $1.date })
-                print("\(document == snapshots?.documents.last)")
-            }
-            completion(true)
-        }
-    }
+//    func fetchAllTrips(completion: @escaping (Bool) -> Void) {
+//        Firestore.firestore().collection("trips").getDocuments { (snapshots, error) in
+//            if let error = error {
+//                print("THERE WAS AN ERROR FETCHING USER: \(error.localizedDescription) ❌❌❌❌❌")
+//                completion(false)
+//                return
+//            }
+//            self.trips.removeAll()
+//            for document in snapshots!.documents {
+//                guard let trip = Trip(dictionary: document.data()) else { print("❌"); return }
+//                self.trips.append(trip)
+//                self.trips.sort(by: { $0.date < $1.date })
+//                print("\(document == snapshots?.documents.last)")
+//            }
+//            completion(true)
+//        }
+//    }
 }
 
 

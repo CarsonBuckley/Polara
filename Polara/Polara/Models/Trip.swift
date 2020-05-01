@@ -10,20 +10,21 @@ import Foundation
 import Firebase
 
 class Trip {
-    
     //var user: Person?
     var id: String
     var creatorID: String
     var resortName: String
     var resortLocation: String
+    var resortState: String
     var date: Double
     var invitedContacts: [String]
     
-    init(userID: String, id: String = UUID().uuidString, resortName: String, resortLocation: String, date: Double, invitedContacts: [String]) {
+    init(userID: String, id: String = UUID().uuidString, resortName: String, resortLocation: String, resortState: String, date: Double, invitedContacts: [String]) {
         self.id = id
         self.creatorID = userID
         self.resortName = resortName
         self.resortLocation = resortLocation
+        self.resortState = resortState
         self.date = date
         self.invitedContacts = invitedContacts
     }
@@ -35,6 +36,7 @@ class Trip {
             "creatorID" : creatorID,
             "resortName" : resortName,
             "resortLocation" : resortLocation,
+            "resortState" : resortState,
             "date" : date,
             "invitedContacts" : invitedContacts
         ]
@@ -49,9 +51,10 @@ extension Trip {
             let id = dictionary["id"] as? String,
             let invitedContacts = dictionary["invitedContacts"] as? [String],
             let resortLocation = dictionary["resortLocation"] as? String,
+            let resortState = dictionary["resortState"] as? String,
             let resortName = dictionary["resortName"] as? String
             else { return nil }
                 
-        self.init(userID: creatorID, id: id, resortName: resortName, resortLocation: resortLocation, date: date, invitedContacts: invitedContacts)
+        self.init(userID: creatorID, id: id, resortName: resortName, resortLocation: resortLocation, resortState: resortState, date: date, invitedContacts: invitedContacts)
     }
 }

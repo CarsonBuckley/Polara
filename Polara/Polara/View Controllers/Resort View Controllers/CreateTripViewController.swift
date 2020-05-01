@@ -48,8 +48,8 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         createTripButton.layer.cornerRadius = 5
-        createTripButton.layer.borderWidth = 3
-        createTripButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        createTripButton.setTitleColor(.black, for: .normal)
+        createTripButton.backgroundColor = .white
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = .date
         let contactCellNib = UINib(nibName: "ContactCell", bundle: nil)
@@ -101,7 +101,7 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func createTripButtonTapped(_ sender: Any) {
         print("CREATE TRIP BUTTON TAPPED ✅✅✅✅✅")
         let dateAsDouble = self.datePicker.date.timeIntervalSince1970
-        TripController.sharedInstance.createTrip(resortName: resort?.name ?? "", resortLocation: resort?.location ?? "", date: dateAsDouble) { (success) in
+        TripController.sharedInstance.createTrip(resortName: resort?.name ?? "", resortLocation: resort?.location ?? "", resortState: resort?.state ?? "", date: dateAsDouble) { (success) in
             if success {
                 PersonController.sharedInstance.removeInvitedContacts(completion: { (success) in
                     if success {

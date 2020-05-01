@@ -66,9 +66,9 @@ class ContactTableViewCell: UITableViewCell {
                 }
             }
         }
-        
         contactNameLabel.text = contact.name
         contactPhoneNumberLabel.text = contact.phoneNumber
+        contactPhoneNumberLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         cellButton.layer.cornerRadius = 5
         cellButton.layer.borderWidth = 3
     }

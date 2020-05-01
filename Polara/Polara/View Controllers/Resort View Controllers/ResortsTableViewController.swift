@@ -23,11 +23,26 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
     //From the CreateTripViewController
     var fromCreateVC: Bool = false
     
-    //let locationManager = CLLocationManager()
+//    let locationManager = CLLocationManager()
+    //    let userLocation = CLLocation(latitude: lat, longitude: long)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getLocation()
+//        getLocation()
+                //guard let resort = resort else { return }
+        //        ResortController.sharedInstance.fetchTemperature(with: resort.coordinates, units: ResortController.sharedInstance.units, language: ResortController.sharedInstance.language, format: ResortController.sharedInstance.format, apiKey: ResortController.sharedInstance.apiKey) { (temperature) in
+        //                guard let temperature = temperature else { print("Failed to fetch resort temperature ❌") ; return }
+        //                self.setTemperatureLabel(temperature)
+        //        }
+        
+        
+//        self.locationManager.requestWhenInUseAuthorization()
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//            locationManager.startUpdatingLocation()
+//        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +56,12 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }
+    
+    //    func setTemperatureLabel(_ temperature: Temperature) {
+    //        DispatchQueue.main.async {
+    //            self.temperatureLabel.text = "\(temperature.temperature)°"
+    //        }
+    //    }
     
     // MARK: - Table view data source
     
@@ -77,9 +98,27 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
         }
     }
     
+//    func roundToFive(x: Double) -> Int {
+//        return 5 * Int(round(x / 5.0))
+//    }
+//
 //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if let currentLocation = locations.last {
-//            print("Current location: \(currentLocation)")
+//        //        if let currentLocation = locations.last {
+//        //            print("Current location: \(currentLocation)")
+//        //        }
+//
+//        guard let locationValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+//        let latitude = locationValue.latitude
+//        let longitude = locationValue.longitude
+//        print("locations = \(locationValue.latitude) \(locationValue.longitude)")
+//
+//        func calculateDistance() -> Int {
+//
+//            let userLocation = CLLocation(latitude: latitude, longitude: longitude)
+//            let destinationLocation = CLLocation(latitude: latitude, longitude: longitude)// latitude and longitude from the json file
+//            let distance = userLocation.distance(from: destinationLocation)
+//
+//            return roundToFive(x: distance)
 //        }
 //    }
 //
@@ -107,6 +146,9 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
 //
 //        case.authorizedAlways, .authorizedWhenInUse:
 //            break
+//
+//        @unknown default:
+//            print("WTF")
 //        }
 //
 //        // 4

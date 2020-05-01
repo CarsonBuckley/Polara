@@ -21,6 +21,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         guard let user = PersonController.sharedInstance.currentUser else { return }
+        //addContactButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         PersonController.sharedInstance.fetchContacts(contact: user, firebaseUID: user.firebaseUID) { (success) in
             if success {
                 if PersonController.sharedInstance.contacts.isEmpty {
@@ -36,6 +37,9 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.register(contactCellNib, forCellReuseIdentifier: "contactCell")
         let barButton = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.setRightBarButton(barButton, animated: true)
+        addContactButton.layer.cornerRadius = 5
+        addContactButton.backgroundColor = .iceBlue
+        addContactButton.setTitleColor(.white, for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -21,10 +21,16 @@ class TripTableViewCell: UITableViewCell {
         }
     }
     
+//    var resort: Resort? {
+//        didSet {
+//            updateViews()
+//        }
+//    }
+    
     func updateViews() {
         guard let trip = trip else { return }        
         resortNameLabel.text = trip.resortName
-        resortLocationLabel.text = trip.resortLocation + ", UT ● "
+        resortLocationLabel.text = "\(trip.resortLocation), \(trip.resortState)"
         resortLocationLabel.textColor = .white
         dateOfTripLabel.text = Date(timeIntervalSince1970: trip.date).stringWith(dateStyle: .medium, timeStyle: .none)
     }

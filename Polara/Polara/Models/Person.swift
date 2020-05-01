@@ -10,7 +10,6 @@ import Foundation
 import Firebase
 
 class Person {
-    
     var name: String
     var email: String
     var phoneNumber: String?

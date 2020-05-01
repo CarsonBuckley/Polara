@@ -39,6 +39,7 @@ extension UIView {
 extension UIColor {
     static let lightBlue = UIColor(named: "lightBlue")
     static let iceBlue = UIColor(named: "iceBlue")!
+    static let lavaRed = UIColor(named: "lavaRed")!
     static let darkMode = UIColor(named: "darkMode")!
 }
 //

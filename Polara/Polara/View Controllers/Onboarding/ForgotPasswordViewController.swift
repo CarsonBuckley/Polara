@@ -22,9 +22,10 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         formatKeyboard()
         emailTextfield.delegate = self
-        sendEmailButton.layer.cornerRadius = 3
-        sendEmailButton.layer.borderWidth = 1.5
-        sendEmailButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        emailTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
+        sendEmailButton.layer.cornerRadius = 5
+        sendEmailButton.backgroundColor = .white
+        sendEmailButton.setTitleColor(.black, for: .normal)
         sendEmailButton.setTitle("SEND", for: .normal)
         // Do any additional setup after loading the view.
         
@@ -39,7 +40,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             UIView.animate(withDuration: 0.3) {
                 self.activityIndicator.stopAnimating()
                 self.sendEmailButton.setTitle("SEND", for: .normal)
-                self.sendEmailButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                self.sendEmailButton.setTitleColor(.black, for: .normal)
             }
         }
     }
@@ -51,8 +52,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     
     func errorButton() {
         UIView.animate(withDuration: 0.3) {
-            self.sendEmailButton.layer.borderColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
-            self.sendEmailButton.setTitleColor(.white, for: .normal)
+            self.sendEmailButton.setTitleColor(.lavaRed, for: .normal)
             self.sendEmailButton.setTitle("RE-CHECK EMAIL", for: .normal)
             self.activityIndicator.stopAnimating()
         }
@@ -81,14 +81,12 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             if let error = error {
                 print(error.localizedDescription)
                 UIView.animate(withDuration: 0.3) {
-                    self.sendEmailButton.layer.borderColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
-                    self.sendEmailButton.setTitleColor(.white, for: .normal)
+                    self.sendEmailButton.setTitleColor(.lavaRed, for: .normal)
                     self.sendEmailButton.setTitle("RE-CHECK EMAIL", for: .normal)
                     self.activityIndicator.stopAnimating()
                 }
             } else {
                 UIView.animate(withDuration: 0.3) {
-                    self.sendEmailButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
                     self.sendEmailButton.setTitleColor(.iceBlue, for: .normal)
                     self.sendEmailButton.setTitle("EMAIL SENT", for: .normal)
                     self.activityIndicator.stopAnimating()

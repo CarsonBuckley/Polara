@@ -12,6 +12,7 @@ class AddContactViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var phoneNumberTextfield: UITextField!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
     
     var contacts: [String] = []
@@ -22,13 +23,12 @@ class AddContactViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         formatKeyboard()
         phoneNumberTextfield.delegate = self
+        phoneNumberTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
         saveButton.layer.cornerRadius = 5
-        saveButton.layer.borderWidth = 3
-        saveButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
-        saveButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        saveButton.backgroundColor = .iceBlue
+        saveButton.setTitleColor(.white, for: .normal)
         let barButton = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.setRightBarButton(barButton, animated: true)
-        // Do any additional setup after loading the view.
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -83,5 +83,9 @@ class AddContactViewController: UIViewController, UITextFieldDelegate {
                 })
             })
         }
+    }
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }

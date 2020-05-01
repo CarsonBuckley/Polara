@@ -14,13 +14,14 @@ class DeleteAccountViewController: UIViewController {
     
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var deleteAccountButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         deleteAccountButton.layer.cornerRadius = 5
-        deleteAccountButton.layer.borderWidth = 3
-        deleteAccountButton.layer.borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        deleteAccountButton.backgroundColor = .lavaRed
+        deleteAccountButton.setTitleColor(.white, for: .normal)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -46,5 +47,9 @@ class DeleteAccountViewController: UIViewController {
                 }
             }
         }
+    }
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }

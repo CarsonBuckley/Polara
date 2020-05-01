@@ -26,13 +26,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         formatKeyboard()
         emailTextfield.delegate = self
+        emailTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
         passwordTextfield.delegate = self
-        loginButton.layer.cornerRadius = 3
-        loginButton.layer.borderWidth = 1.5
-        loginButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        signUpButton.layer.cornerRadius = 3
-        signUpButton.layer.borderWidth = 1.5
-        signUpButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        passwordTextfield.isSecureTextEntry = true
+        loginButton.layer.cornerRadius = 5
+        loginButton.backgroundColor = .white
+        loginButton.setTitleColor(.black, for: .normal)
+        signUpButton.layer.cornerRadius = 5
+        signUpButton.backgroundColor = .white
+        signUpButton.setTitleColor(.black, for: .normal)
         isModalInPresentation = true
         
         // Do any additional setup after loading the view.

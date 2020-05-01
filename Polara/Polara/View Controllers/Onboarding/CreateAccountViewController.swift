@@ -24,12 +24,18 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         formatKeyboard()
         nameTextfield.delegate = self
+        nameTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
         emailTextfield.delegate = self
+        emailTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
         passwordTextfield.delegate = self
+        passwordTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
+        passwordTextfield.isSecureTextEntry = true
         confirmPasswordTextfield.delegate = self
-        createAccountButton.layer.cornerRadius = 3
-        createAccountButton.layer.borderWidth = 1.5
-        createAccountButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        confirmPasswordTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
+        confirmPasswordTextfield.isSecureTextEntry = true
+        createAccountButton.layer.cornerRadius = 5
+        createAccountButton.backgroundColor = .white
+        createAccountButton.setTitleColor(.black, for: .normal)
         
         // Do any additional setup after loading the view.
     }
@@ -43,7 +49,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             UIView.animate(withDuration: 0.3) {
                 self.activityIndicator.stopAnimating()
                 self.createAccountButton.setTitle("CREATE ACCOUNT", for: .normal)
-                self.createAccountButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                self.createAccountButton.setTitleColor(.black, for: .normal)
             }
         }
     }
@@ -71,7 +77,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     func errorButton() {
         UIView.animate(withDuration: 0.3) {
-            self.createAccountButton.layer.borderColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+            self.createAccountButton.setTitleColor(.lavaRed, for: .normal)
             self.createAccountButton.setTitle("RE-CHECK INPUTS", for: .normal)
             self.activityIndicator.stopAnimating()
         }

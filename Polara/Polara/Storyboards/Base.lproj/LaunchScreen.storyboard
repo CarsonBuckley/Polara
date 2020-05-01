@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,20 +22,30 @@
                                     <constraint firstAttribute="width" constant="240" id="q3t-MO-Mbl"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Carson Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="ezS-YQ-QZA">
-                                <rect key="frame" x="132" y="620" width="150" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="6f5-ex-89m"/>
-                                    <constraint firstAttribute="width" constant="150" id="oVY-y2-Xe0"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yiz-dW-ZWn">
+                                <rect key="frame" x="116.5" y="696.5" width="181.5" height="37.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a product by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sse-Rt-Fl9">
+                                        <rect key="frame" x="57.5" y="0.0" width="66.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARSON BUCKLEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rb5-SF-gPS">
+                                        <rect key="frame" x="0.0" y="13.5" width="181.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Yiz-dW-ZWn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="A0w-fH-Vmz"/>
                             <constraint firstItem="CER-kZ-ftV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DEp-fX-jUF"/>
-                            <constraint firstItem="ezS-YQ-QZA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NK3-l8-LNS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yiz-dW-ZWn" secondAttribute="bottom" constant="128" id="dWg-4P-E12"/>
                             <constraint firstItem="CER-kZ-ftV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="nPi-9B-mEX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ezS-YQ-QZA" secondAttribute="bottom" constant="200" id="uUJ-pc-hp9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -52,7 +59,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Carson Launch Screen" width="245" height="42"/>
         <image name="Polara Logo" width="189" height="128"/>
     </resources>
 </document>

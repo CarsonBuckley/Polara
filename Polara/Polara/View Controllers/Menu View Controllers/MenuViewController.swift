@@ -19,13 +19,26 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contactsButton.layer.cornerRadius = 5
-        contactsButton.layer.borderWidth = 3
-        contactsButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        notificationsButton.layer.cornerRadius = 3
-        notificationsButton.layer.borderWidth = 1.5
-        notificationsButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        notificationsButton.isHidden = true
+        contactsButton.backgroundColor = .white
+        contactsButton.setTitleColor(.black, for: .normal)
+        notificationsButton.layer.cornerRadius = 5
+        notificationsButton.backgroundColor = .white
+        notificationsButton.setTitleColor(.black, for: .normal)
+//        notificationsButton.isHidden = true
         referralCodeStackView.isHidden = true
+        
+        print(ResortController.sharedInstance.resortNames.count)
+        print(ResortController.sharedInstance.resortLocations.count)
+        print(ResortController.sharedInstance.resortStates.count)
+        print(ResortController.sharedInstance.resortCoordinates.count)
+        print(ResortController.sharedInstance.resortWebsites.count)
+        print(ResortController.sharedInstance.resortWebsiteNames.count)
+        print(ResortController.sharedInstance.resortTopElevation.count)
+        print(ResortController.sharedInstance.resortSkiableAcres.count)
+        print(ResortController.sharedInstance.resortNumberOfTrails.count)
+        print(ResortController.sharedInstance.resortMapURL.count)
+        print(ResortController.sharedInstance.resortAddress.count)
+        print(ResortController.sharedInstance.resortPhoneNumber.count)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

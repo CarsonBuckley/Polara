@@ -10,14 +10,11 @@ import UIKit
 
 class LabelViewController: UIViewController {
 
-    
     @IBOutlet weak var robotoLabel: UILabel!
     @IBOutlet weak var systemLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
-        
         robotoLabel.font = UIFont(name: "Roboto-Bold", size: 30)
         robotoLabel.text = "Powder Mountain"
         robotoLabel.textColor = .white

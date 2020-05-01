@@ -65,7 +65,9 @@ class UpcomingTripsViewController: UIViewController, UITableViewDelegate, UITabl
         
         // Configure the cell...
         let trip = TripController.sharedInstance.trips[indexPath.row]
+//        let resort = ResortController.sharedInstance.resorts[indexPath.row]
         cell?.trip = trip
+//        cell?.resort = resort
         
         return cell ?? UITableViewCell()
     }

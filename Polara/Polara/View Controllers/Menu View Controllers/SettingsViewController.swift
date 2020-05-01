@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
-    @IBOutlet weak var addUpdateButton: UIButton!
+    @IBOutlet weak var addEditButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var deleteAccountButton: UIButton!
@@ -27,25 +27,30 @@ class SettingsViewController: UIViewController {
         guard let user = PersonController.sharedInstance.currentUser else { return }
         nameLabel.text = user.name
         emailLabel.text = user.email
+        emailLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         phoneNumberLabel.text = user.phoneNumber
+        phoneNumberLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         if user.phoneNumber == "" {
-            addUpdateButton.setTitle("ADD", for: .normal)
+            addEditButton.setTitle("ADD", for: .normal)
         } else {
-            addUpdateButton.setTitle("UPDATE", for: .normal)
+            addEditButton.setTitle("EDIT", for: .normal)
         }
-        addUpdateButton.layer.cornerRadius = 5
-        addUpdateButton.layer.borderWidth = 3
-        addUpdateButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
-        addUpdateButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        //addUpdateButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
+        addEditButton.layer.cornerRadius = 5
+        addEditButton.backgroundColor = .iceBlue
+        addEditButton.setTitleColor(.white, for: .normal)
+        //changePasswordButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         changePasswordButton.layer.cornerRadius = 5
-        changePasswordButton.layer.borderWidth = 3
-        changePasswordButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        changePasswordButton.backgroundColor = .white
+        changePasswordButton.setTitleColor(.black, for: .normal)
+        //logOutButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         logOutButton.layer.cornerRadius = 5
-        logOutButton.layer.borderWidth = 3
-        logOutButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        logOutButton.backgroundColor = .white
+        logOutButton.setTitleColor(.black, for: .normal)
+        //deleteAccountButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         deleteAccountButton.layer.cornerRadius = 5
-        deleteAccountButton.layer.borderWidth = 3
-        deleteAccountButton.layer.borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        deleteAccountButton.backgroundColor = .lavaRed
+        deleteAccountButton.setTitleColor(.white, for: .normal)
         let barButton = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.setRightBarButton(barButton, animated: true)
     }
@@ -58,9 +63,9 @@ class SettingsViewController: UIViewController {
                 guard let user = PersonController.sharedInstance.currentUser else { return }
                 self.phoneNumberLabel.text = user.phoneNumber
                 if user.phoneNumber == "" {
-                    self.addUpdateButton.setTitle("ADD", for: .normal)
+                    self.addEditButton.setTitle("ADD", for: .normal)
                 } else {
-                    self.addUpdateButton.setTitle("UPDATE", for: .normal)
+                    self.addEditButton.setTitle("EDIT", for: .normal)
                 }
             }
         }
@@ -76,8 +81,7 @@ class SettingsViewController: UIViewController {
         PersonController.sharedInstance.updatePassword(email: user.email, completion: { (success, error) in
             if success {
                 UIView.animate(withDuration: 0.3) {
-                    self.changePasswordButton.layer.borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
-                    self.changePasswordButton.setTitleColor(.white, for: .normal)
+                    self.changePasswordButton.setTitleColor(.iceBlue, for: .normal)
                     self.changePasswordButton.setTitle("EMAIL SENT", for: .normal)
                     print("SUCCESS SENDING PASSWORD RESET ✅✅✅✅✅")
                     self.activityIndicator.stopAnimating()
