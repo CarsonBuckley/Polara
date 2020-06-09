@@ -27,13 +27,13 @@ class SettingsViewController: UIViewController {
         guard let user = PersonController.sharedInstance.currentUser else { return }
         nameLabel.text = user.name
         emailLabel.text = user.email
-        emailLabel.font = UIFont(name: "Roboto-Bold", size: 17)
+        //emailLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         phoneNumberLabel.text = user.phoneNumber
-        phoneNumberLabel.font = UIFont(name: "Roboto-Bold", size: 17)
+        //phoneNumberLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         if user.phoneNumber == "" {
-            addEditButton.setTitle("ADD", for: .normal)
+            addEditButton.setTitle("Add", for: .normal)
         } else {
-            addEditButton.setTitle("EDIT", for: .normal)
+            addEditButton.setTitle("Edit", for: .normal)
         }
         //addUpdateButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         addEditButton.layer.cornerRadius = 5
@@ -63,9 +63,9 @@ class SettingsViewController: UIViewController {
                 guard let user = PersonController.sharedInstance.currentUser else { return }
                 self.phoneNumberLabel.text = user.phoneNumber
                 if user.phoneNumber == "" {
-                    self.addEditButton.setTitle("ADD", for: .normal)
+                    self.addEditButton.setTitle("Add", for: .normal)
                 } else {
-                    self.addEditButton.setTitle("EDIT", for: .normal)
+                    self.addEditButton.setTitle("Edit", for: .normal)
                 }
             }
         }
@@ -82,7 +82,7 @@ class SettingsViewController: UIViewController {
             if success {
                 UIView.animate(withDuration: 0.3) {
                     self.changePasswordButton.setTitleColor(.iceBlue, for: .normal)
-                    self.changePasswordButton.setTitle("EMAIL SENT", for: .normal)
+                    self.changePasswordButton.setTitle("Email Sent", for: .normal)
                     print("SUCCESS SENDING PASSWORD RESET ✅✅✅✅✅")
                     self.activityIndicator.stopAnimating()
                 }
@@ -90,7 +90,7 @@ class SettingsViewController: UIViewController {
                 UIView.animate(withDuration: 0.3) {
                     self.changePasswordButton.layer.borderColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
                     self.changePasswordButton.setTitleColor(.white, for: .normal)
-                    self.changePasswordButton.setTitle("FAILED", for: .normal)
+                    self.changePasswordButton.setTitle("Failed", for: .normal)
                     print("FAILED TO SEND PASSWORD RESET ❌❌❌❌❌")
                     self.activityIndicator.stopAnimating()
                 }

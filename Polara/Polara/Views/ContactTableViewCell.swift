@@ -35,7 +35,7 @@ class ContactTableViewCell: UITableViewCell {
             if user.blockedUsersFirebase.contains(contact.firebaseUID) {
                 var title: String
                 var borderColor: UIColor
-                title = "BLOCKED"
+                title = "Blocked"
                 borderColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
                 cellButton.setTitle(title, for: .normal)
                 cellButton.layer.borderColor = borderColor.cgColor
@@ -43,7 +43,7 @@ class ContactTableViewCell: UITableViewCell {
                 cellButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 var title: String
                 if self.status == .block {
-                    title = "BLOCK"
+                    title = "Block"
                     cellButton.setTitle(title, for: .normal)
                 }
             }
@@ -53,7 +53,7 @@ class ContactTableViewCell: UITableViewCell {
             if user.invitedUsersFirebase.contains(contact.firebaseUID) {
                 var title: String
                 var borderColor: UIColor
-                title = "INVITED"
+                title = "Invited"
                 borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
                 cellButton.setTitle(title, for: .normal)
                 cellButton.layer.borderColor = borderColor.cgColor
@@ -61,7 +61,7 @@ class ContactTableViewCell: UITableViewCell {
                 cellButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 var title: String
                 if self.status == .invite {
-                    title = "INVITE"
+                    title = "Invite"
                     self.cellButton.setTitle(title, for: .normal)
                 }
             }

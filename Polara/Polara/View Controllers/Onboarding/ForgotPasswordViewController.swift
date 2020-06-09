@@ -26,7 +26,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         sendEmailButton.layer.cornerRadius = 5
         sendEmailButton.backgroundColor = .white
         sendEmailButton.setTitleColor(.black, for: .normal)
-        sendEmailButton.setTitle("SEND", for: .normal)
+        sendEmailButton.setTitle("Send", for: .normal)
         // Do any additional setup after loading the view.
         
     }
@@ -39,7 +39,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         if textField.isEditing == true {
             UIView.animate(withDuration: 0.3) {
                 self.activityIndicator.stopAnimating()
-                self.sendEmailButton.setTitle("SEND", for: .normal)
+                self.sendEmailButton.setTitle("Send", for: .normal)
                 self.sendEmailButton.setTitleColor(.black, for: .normal)
             }
         }
@@ -53,7 +53,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     func errorButton() {
         UIView.animate(withDuration: 0.3) {
             self.sendEmailButton.setTitleColor(.lavaRed, for: .normal)
-            self.sendEmailButton.setTitle("RE-CHECK EMAIL", for: .normal)
+            self.sendEmailButton.setTitle("Re-Check Email", for: .normal)
             self.activityIndicator.stopAnimating()
         }
     }
@@ -82,13 +82,13 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
                 print(error.localizedDescription)
                 UIView.animate(withDuration: 0.3) {
                     self.sendEmailButton.setTitleColor(.lavaRed, for: .normal)
-                    self.sendEmailButton.setTitle("RE-CHECK EMAIL", for: .normal)
+                    self.sendEmailButton.setTitle("Re-Check Email", for: .normal)
                     self.activityIndicator.stopAnimating()
                 }
             } else {
                 UIView.animate(withDuration: 0.3) {
                     self.sendEmailButton.setTitleColor(.iceBlue, for: .normal)
-                    self.sendEmailButton.setTitle("EMAIL SENT", for: .normal)
+                    self.sendEmailButton.setTitle("Email Sent", for: .normal)
                     self.activityIndicator.stopAnimating()
                 }
             }

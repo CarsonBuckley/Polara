@@ -48,7 +48,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         if textField.isEditing == true {
             UIView.animate(withDuration: 0.3) {
                 self.activityIndicator.stopAnimating()
-                self.createAccountButton.setTitle("CREATE ACCOUNT", for: .normal)
+                self.createAccountButton.setTitle("Create Account", for: .normal)
                 self.createAccountButton.setTitleColor(.black, for: .normal)
             }
         }
@@ -78,7 +78,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     func errorButton() {
         UIView.animate(withDuration: 0.3) {
             self.createAccountButton.setTitleColor(.lavaRed, for: .normal)
-            self.createAccountButton.setTitle("RE-CHECK INPUTS", for: .normal)
+            self.createAccountButton.setTitle("Re-Check Inputs", for: .normal)
             self.activityIndicator.stopAnimating()
         }
     }

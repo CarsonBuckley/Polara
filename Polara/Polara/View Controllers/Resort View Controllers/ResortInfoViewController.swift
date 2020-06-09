@@ -71,6 +71,10 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
 //        print("locations = \(locValue.latitude) \(locValue.longitude)")
 //    }
     
+//    func distanceToResort() {
+//        let currentLocation = CLLocation()
+//    }
+    
     func setTemperatureLabel(_ temperature: Temperature) {
         DispatchQueue.main.async {
             self.temperatureLabel.text = "\(temperature.temperature)°"
@@ -82,13 +86,14 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //        if let currentLocation = locations.last {
-        //            print("Current location: \(currentLocation)")
-        //        }
+//                if let currentLocation = locations.last {
+//                    print("Current location: \(currentLocation)")
+//                }
         
         guard let locationValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         let latitude = locationValue.latitude
         let longitude = locationValue.longitude
+//        let resortLatitude = Location.init(latitude: <#T##Double#>, longitude: <#T##Double#>)
         print("locations = \(locationValue.latitude) \(locationValue.longitude)")
         
         func calculateDistance() -> Int {

@@ -65,7 +65,7 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
                 self.dismiss(animated: true, completion: nil)
             } else {
                 self.saveButton.layer.borderColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
-                self.saveButton.setTitle("RE-CHECK INPUT", for: .normal)
+                self.saveButton.setTitle("Re-Check Input", for: .normal)
                 print("FAILED TO SAVE UPDATED PHONENUMBER ❌❌❌❌❌")
             }
         }

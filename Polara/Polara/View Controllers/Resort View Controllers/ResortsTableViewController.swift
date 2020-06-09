@@ -11,6 +11,8 @@ import CoreLocation
 
 class ResortsTableViewController: UITableViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var filterButton: UIBarButtonItem!
+    
     //Source of Truth
     var resorts: [Resort] = [] {
         didSet {
@@ -155,4 +157,7 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
 //        locationManager.delegate = self
 //        locationManager.startUpdatingLocation()
 //    }
+    @IBAction func filterButtonTapped(_ sender: UIBarButtonItem) {
+        
+    }
 }
