@@ -90,7 +90,7 @@
                 <navigationController id="xRD-az-1fG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MENU" image="Glyph Account" id="LBt-DS-D2r"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="mkM-Wh-mZY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="iceBlue"/>
@@ -118,7 +118,7 @@
                     <tabBarItem key="tabBarItem" title="RESORTS" image="Glyph Resort" id="rNf-tL-vsA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="dWf-v4-BFb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="iceBlue"/>
@@ -226,15 +226,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Resorts" id="vaT-mS-ZIl">
                         <barButtonItem key="backBarButtonItem" title=" " id="S2V-f7-ZBj"/>
-                        <barButtonItem key="rightBarButtonItem" title="Filter" image="tray.full" catalog="system" id="cjj-R9-yoJ">
-                            <connections>
-                                <action selector="filterButtonTapped:" destination="TFD-l9-Q0Z" id="x0z-bs-xbN"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="filterButton" destination="cjj-R9-yoJ" id="Mh8-VC-X34"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eC0-6n-TAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,7 +238,7 @@
                 <navigationController storyboardIdentifier="tripsNavigationController" id="rZZ-J1-2Uh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="TRIPS" image="Glyph Points" id="sOP-eE-sKd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="Ksu-xx-QHH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="iceBlue"/>
@@ -1142,15 +1134,9 @@
             <objects>
                 <viewController id="G9N-qa-uts" customClass="ResortInfoViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ROg-hd-W10">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,000 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-PJ-isZ">
-                                <rect key="frame" x="303.5" y="247" width="90.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-KM-u5O">
                                 <rect key="frame" x="20" y="288.5" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -1164,7 +1150,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLf-B1-159">
-                                <rect key="frame" x="20" y="595.5" width="374" height="53"/>
+                                <rect key="frame" x="20" y="604" width="374" height="53"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                                 <state key="normal" title="Create a Trip">
@@ -1198,7 +1184,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5B-OW-FfJ">
-                                <rect key="frame" x="20" y="549.5" width="60" height="30"/>
+                                <rect key="frame" x="20" y="558" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" name="iceBlue"/>
                                 <state key="normal" title="Website">
@@ -1215,7 +1201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q39-WE-2I4">
-                                <rect key="frame" x="317" y="280.5" width="77" height="40"/>
+                                <rect key="frame" x="317" y="247" width="77" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="v72-xH-Vic"/>
                                 </constraints>
@@ -1229,28 +1215,34 @@
                                     <action selector="mapsButtonTapped:" destination="G9N-qa-uts" eventType="touchUpInside" id="nry-xC-TwF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,000 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-PJ-isZ">
+                                <rect key="frame" x="303.5" y="295" width="90.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xin-pN-slR" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="50t-f3-xVo"/>
                             <constraint firstItem="D5B-OW-FfJ" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="A6C-Qp-4ce"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="iLf-B1-159" secondAttribute="trailing" constant="20" id="AvB-95-QUh"/>
-                            <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="pZo-PJ-isZ" secondAttribute="trailing" constant="20" id="CbW-Lj-E0e"/>
+                            <constraint firstItem="Q39-WE-2I4" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="M9F-W5-WqF"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="Q39-WE-2I4" secondAttribute="trailing" constant="20" id="MmG-3K-loE"/>
                             <constraint firstItem="WoE-mh-ERl" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="Qwl-yg-cLg"/>
+                            <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="pZo-PJ-isZ" secondAttribute="trailing" constant="20" id="TI1-i1-mf2"/>
                             <constraint firstItem="xin-pN-slR" firstAttribute="top" secondItem="Qhb-KM-u5O" secondAttribute="bottom" constant="16" id="TOH-YC-cpa"/>
                             <constraint firstItem="cDw-0u-ESq" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="Ty0-FD-Tt3"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="WoE-mh-ERl" secondAttribute="trailing" constant="20" id="UVf-AB-Wzk"/>
                             <constraint firstItem="iLf-B1-159" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="a9K-O1-XxF"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="trailing" secondItem="xin-pN-slR" secondAttribute="trailing" constant="20" id="g7Q-KK-ZHN"/>
+                            <constraint firstItem="pZo-PJ-isZ" firstAttribute="top" secondItem="Q39-WE-2I4" secondAttribute="bottom" constant="8" id="h09-U3-3fI"/>
                             <constraint firstItem="cDw-0u-ESq" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="h6F-MR-X6W"/>
                             <constraint firstItem="ohY-vO-Jai" firstAttribute="bottom" secondItem="iLf-B1-159" secondAttribute="bottom" constant="16" id="iLO-TZ-eIT"/>
                             <constraint firstItem="Qhb-KM-u5O" firstAttribute="top" secondItem="cDw-0u-ESq" secondAttribute="bottom" constant="16" id="mka-gd-h1i"/>
                             <constraint firstItem="iLf-B1-159" firstAttribute="top" secondItem="D5B-OW-FfJ" secondAttribute="bottom" constant="16" id="nZ6-uG-7fg"/>
-                            <constraint firstItem="Q39-WE-2I4" firstAttribute="top" secondItem="pZo-PJ-isZ" secondAttribute="bottom" constant="8" id="ozR-oT-t0D"/>
                             <constraint firstItem="WoE-mh-ERl" firstAttribute="top" secondItem="ohY-vO-Jai" secondAttribute="top" constant="8" id="q9b-63-zec"/>
                             <constraint firstItem="Qhb-KM-u5O" firstAttribute="leading" secondItem="ohY-vO-Jai" secondAttribute="leading" constant="20" id="tad-zp-Ilh"/>
-                            <constraint firstItem="pZo-PJ-isZ" firstAttribute="top" secondItem="WoE-mh-ERl" secondAttribute="bottom" constant="8" id="xE7-rU-hfI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ohY-vO-Jai"/>
                     </view>
@@ -1279,7 +1271,7 @@
             <objects>
                 <viewController storyboardIdentifier="createTripVC" id="0LL-Gv-RPg" customClass="CreateTripViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VQ7-iz-HXu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Mci-We-Tuk">
@@ -1288,7 +1280,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ype-iD-KCH">
-                                <rect key="frame" x="0.0" y="264" width="414" height="400.5"/>
+                                <rect key="frame" x="0.0" y="264" width="414" height="409"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -1457,11 +1449,11 @@
             <objects>
                 <viewController storyboardIdentifier="contactVC" id="esm-uu-wii" customClass="ContactsViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xhp-vN-sih">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8mI-GR-VCg">
-                                <rect key="frame" x="0.0" y="56" width="414" height="608.5"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="617"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="esm-uu-wii" id="8gj-Ju-HPk"/>
@@ -1606,7 +1598,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="notificationVC" id="iLb-g7-Ye4" customClass="NotificationsTableViewController" customModule="Polara" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TS4-fh-vBK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1767,7 +1759,6 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
         <image name="Glyph Resort" width="30" height="25"/>
         <image name="Glyph Settings" width="29" height="29"/>
         <image name="Polara Logo" width="189" height="128"/>
-        <image name="tray.full" catalog="system" width="128" height="88"/>
         <namedColor name="darkMode">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -41,7 +41,8 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         resortImage.layer.cornerRadius = 10
         resortLocationLabel.text = "\(resort.location), \(resort.state)"
         resortLocationLabel.textColor = .white
-        distanceLabel.text = "0000 mi"
+        distanceLabel.isHidden = true
+//        distanceLabel.text = "0000 mi"
         elevationLabel.text = "Elevation: \(resort.elevation) ft"
         acresLabel.text = "Skiable: \(resort.acres) acres"
         trailsLabel.text = "Trails: \(resort.trails)"
