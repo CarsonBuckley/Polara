@@ -9,7 +9,11 @@
 import UIKit
 
 extension UIView {
-//
+
+    func addTextFieldLine(width: CGFloat = 1, color: UIColor = .lightGray) {
+        self.layer.borderWidth = width
+        self.layer.borderColor = color.cgColor
+    }
 //    func addCornerRadius(_ radius: CGFloat = 5) {
 //        self.layer.masksToBounds = true
 //        self.layer.cornerRadius = radius

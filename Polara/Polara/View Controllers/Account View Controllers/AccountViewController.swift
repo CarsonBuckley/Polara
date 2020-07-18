@@ -9,18 +9,29 @@
 import UIKit
 import Firebase
 
-class MenuViewController: UIViewController {
+class AccountViewController: UIViewController {
 
     @IBOutlet weak var referralCodeStackView: UIStackView!
     @IBOutlet weak var referralCodeLabel: UILabel!
-    @IBOutlet weak var contactsButton: UIButton!
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var friendsButton: UIButton!
     @IBOutlet weak var notificationsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactsButton.layer.cornerRadius = 5
-        contactsButton.backgroundColor = .white
-        contactsButton.setTitleColor(.black, for: .normal)
+        guard let user = PersonController.sharedInstance.currentUser else { return }
+        profilePicture.layer.borderWidth = 3
+        profilePicture.layer.borderColor = UIColor(ciColor: .white).cgColor
+        profilePicture.layer.cornerRadius = profilePicture.frame.height / 2
+        nameLabel.text = user.name
+        emailLabel.text = user.email
+        phoneNumberLabel.text = user.phoneNumber
+        friendsButton.layer.cornerRadius = 5
+        friendsButton.backgroundColor = .white
+        friendsButton.setTitleColor(.black, for: .normal)
         notificationsButton.layer.cornerRadius = 5
         notificationsButton.backgroundColor = .white
         notificationsButton.setTitleColor(.black, for: .normal)
@@ -39,6 +50,17 @@ class MenuViewController: UIViewController {
         print(ResortController.sharedInstance.resortMapURL.count)
         print(ResortController.sharedInstance.resortAddress.count)
         print(ResortController.sharedInstance.resortPhoneNumber.count)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let id = Auth.auth().currentUser?.uid else { return }
+        PersonController.sharedInstance.initializeUser(fireBaseUID: id) { (success) in
+            if success {
+                guard let user = PersonController.sharedInstance.currentUser else { return }
+                self.phoneNumberLabel.text = user.phoneNumber
+            }
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

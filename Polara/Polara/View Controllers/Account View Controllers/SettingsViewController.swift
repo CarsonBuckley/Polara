@@ -11,7 +11,10 @@ import Firebase
 import FirebaseAuth
 
 class SettingsViewController: UIViewController {
-    
+
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
@@ -24,11 +27,34 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Remove border on text field
+        nameTextField.borderStyle = .none
+        emailTextField.borderStyle = .none
+        phoneNumberTextField.borderStyle = .none
+        
+        // Change placeholder text color
+        nameTextField.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        phoneNumberTextField.attributedPlaceholder = NSAttributedString(string: "Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
+        
+        
+//        TEMPORARILY HIDDEN ITEMS <<<-------------------------------------------------
+        nameLabel.isHidden = true
+        emailLabel.isHidden = true
+        phoneNumberLabel.isHidden = true
+        addEditButton.isHidden = true
+        
+        
+        
+        
         guard let user = PersonController.sharedInstance.currentUser else { return }
         nameLabel.text = user.name
         emailLabel.text = user.email
         //emailLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         phoneNumberLabel.text = user.phoneNumber
+        //phoneNumberLabel
         //phoneNumberLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         if user.phoneNumber == "" {
             addEditButton.setTitle("Add", for: .normal)

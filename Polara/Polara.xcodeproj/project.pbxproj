@@ -60,7 +60,7 @@
 		B9AFE8232288C10100BD0EC7 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AFE8222288C10100BD0EC7 /* PassViewController.swift */; };
 		B9BDA36C22974CB3008D1E6E /* TripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BDA36B22974CB3008D1E6E /* TripCell.xib */; };
 		B9C37C6C2289153700F15788 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C37C6B2289153700F15788 /* SettingsViewController.swift */; };
-		B9C37C702289264F00F15788 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C37C6F2289264F00F15788 /* MenuViewController.swift */; };
+		B9C37C702289264F00F15788 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C37C6F2289264F00F15788 /* AccountViewController.swift */; };
 		B9C37C722289275400F15788 /* LodgingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C37C712289275400F15788 /* LodgingViewController.swift */; };
 		B9C37C742289275F00F15788 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C37C732289275F00F15788 /* ShopViewController.swift */; };
 		B9F04F6622872DA400B178CE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F04F6522872DA400B178CE /* Person.swift */; };
@@ -162,7 +162,7 @@
 		B9AFE8222288C10100BD0EC7 /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
 		B9BDA36B22974CB3008D1E6E /* TripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripCell.xib; sourceTree = "<group>"; };
 		B9C37C6B2289153700F15788 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		B9C37C6F2289264F00F15788 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B9C37C6F2289264F00F15788 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		B9C37C712289275400F15788 /* LodgingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingViewController.swift; sourceTree = "<group>"; };
 		B9C37C732289275F00F15788 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		B9F04F6522872DA400B178CE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 		B9AE423B2286554B005E1DD8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B9C37C692289150600F15788 /* Menu View Controllers */,
+				B9C37C692289150600F15788 /* Account View Controllers */,
 				B9C37C68228914DE00F15788 /* Resort View Controllers */,
 				B9C37C6A2289151100F15788 /* Trip View Controllers */,
 				B95CF4F6228B3ED90050CE0F /* Onboarding */,
@@ -421,10 +421,10 @@
 			path = "Resort View Controllers";
 			sourceTree = "<group>";
 		};
-		B9C37C692289150600F15788 /* Menu View Controllers */ = {
+		B9C37C692289150600F15788 /* Account View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B9C37C6F2289264F00F15788 /* MenuViewController.swift */,
+				B9C37C6F2289264F00F15788 /* AccountViewController.swift */,
 				B9C37C6B2289153700F15788 /* SettingsViewController.swift */,
 				B9677350228E4BFB0020E398 /* PhoneNumberViewController.swift */,
 				B967734E228E44560020E398 /* DeleteAccountViewController.swift */,
@@ -433,7 +433,7 @@
 				B92C04FE228DF33000ABA42D /* NotificationsTableViewController.swift */,
 				B95B96FB243D03BC00920350 /* LabelViewController.swift */,
 			);
-			path = "Menu View Controllers";
+			path = "Account View Controllers";
 			sourceTree = "<group>";
 		};
 		B9C37C6A2289151100F15788 /* Trip View Controllers */ = {
@@ -606,7 +606,7 @@
 				B92C0506228E044400ABA42D /* ContactTableViewCell.swift in Sources */,
 				B967734D228E2D440020E398 /* CreateAccountViewController.swift in Sources */,
 				B971873922868F5C00CF1010 /* ResortsTableViewController.swift in Sources */,
-				B9C37C702289264F00F15788 /* MenuViewController.swift in Sources */,
+				B9C37C702289264F00F15788 /* AccountViewController.swift in Sources */,
 				B95CF4F8228B3F050050CE0F /* SplashScreenViewController.swift in Sources */,
 				B9AE423F228655A0005E1DD8 /* StyleGuide.swift in Sources */,
 				B932E2A9228CCD1F006250D6 /* ResortInfoViewController.swift in Sources */,

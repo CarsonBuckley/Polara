@@ -10,7 +10,7 @@ import UIKit
 
 class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var phoneNumberTextfield: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -19,11 +19,23 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Create the bottom line
+//        let phoneNumberLine = CALayer()
+//        
+//        phoneNumberLine.frame = CGRect(x: 0, y: phoneNumberTextField.frame.height - 2, width: phoneNumberTextField.frame.width, height: 1)
+//        
+//        phoneNumberLine.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).cgColor
+//        
+//        phoneNumberTextField.borderStyle = .none
+//        phoneNumberTextField.layer.addSublayer(phoneNumberLine)
+//        phoneNumberTextField.attributedPlaceholder = NSAttributedString(string: "Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
         formatKeyboard()
-        phoneNumberTextfield.delegate = self
+        phoneNumberTextField.delegate = self
         guard let user = PersonController.sharedInstance.currentUser else { return }
-        phoneNumberTextfield.font = UIFont(name: "Roboto-Bold", size: 17)
-        phoneNumberTextfield.text = user.phoneNumber
+        phoneNumberTextField.font = UIFont(name: "Roboto-Bold", size: 17)
+        phoneNumberTextField.text = user.phoneNumber
         //saveButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         saveButton.layer.cornerRadius = 5
         saveButton.backgroundColor = .iceBlue
@@ -57,7 +69,7 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         self.activityIndicator.startAnimating()
-        guard let user = PersonController.sharedInstance.currentUser, let updatedPhoneNumber = phoneNumberTextfield.text else { return }
+        guard let user = PersonController.sharedInstance.currentUser, let updatedPhoneNumber = phoneNumberTextField.text else { return }
         PersonController.sharedInstance.updatePhoneNumber(docRef: user.selfDocRef, phoneNumber: updatedPhoneNumber) { (success) in
             if success {
                 print("SUCCESSFULLY SAVED UPDATED PHONENUMBER ✅✅✅✅✅")
