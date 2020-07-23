@@ -14,6 +14,7 @@ protocol ContactTableViewCellDelegate: class {
 
 class ContactTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var contactPhoneNumberLabel: UILabel!
     @IBOutlet weak var cellButton: UIButton!
@@ -54,7 +55,8 @@ class ContactTableViewCell: UITableViewCell {
                 var title: String
                 var borderColor: UIColor
                 title = "Invited"
-                borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
+                borderColor = .systemBlue
+//                borderColor = #colorLiteral(red: 0.4, green: 0.8, blue: 1, alpha: 1)
                 cellButton.setTitle(title, for: .normal)
                 cellButton.layer.borderColor = borderColor.cgColor
             } else {
@@ -66,9 +68,11 @@ class ContactTableViewCell: UITableViewCell {
                 }
             }
         }
+//        profileImage.layer.borderWidth = 3
+//        profileImage.layer.borderColor = UIColor(ciColor: .white).cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
         contactNameLabel.text = contact.name
         contactPhoneNumberLabel.text = contact.phoneNumber
-        contactPhoneNumberLabel.font = UIFont(name: "Roboto-Bold", size: 17)
         cellButton.layer.cornerRadius = 5
         cellButton.layer.borderWidth = 3
     }

@@ -10,14 +10,12 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var addEditButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
@@ -28,55 +26,45 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Remove border on text field
-        nameTextField.borderStyle = .none
-        emailTextField.borderStyle = .none
-        phoneNumberTextField.borderStyle = .none
+//        TEMPORARILY HIDDEN ITEMS <<<----------------------
+//        addEditButton.isHidden = true
         
-        // Change placeholder text color
-        nameTextField.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        phoneNumberTextField.attributedPlaceholder = NSAttributedString(string: "Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        
-        
-        
-//        TEMPORARILY HIDDEN ITEMS <<<-------------------------------------------------
-        nameLabel.isHidden = true
-        emailLabel.isHidden = true
-        phoneNumberLabel.isHidden = true
-        addEditButton.isHidden = true
-        
-        
-        
+        firstNameTextField.delegate = self
+        emailTextField.delegate = self
+        phoneNumberTextField.delegate = self
         
         guard let user = PersonController.sharedInstance.currentUser else { return }
-        nameLabel.text = user.name
-        emailLabel.text = user.email
-        //emailLabel.font = UIFont(name: "Roboto-Bold", size: 17)
-        phoneNumberLabel.text = user.phoneNumber
-        //phoneNumberLabel
-        //phoneNumberLabel.font = UIFont(name: "Roboto-Bold", size: 17)
+        profileImage.layer.borderWidth = 3
+        profileImage.layer.borderColor = UIColor(ciColor: .white).cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        firstNameTextField.text = user.name
+        emailTextField.text = user.email
+        phoneNumberTextField.text = user.phoneNumber
         if user.phoneNumber == "" {
             addEditButton.setTitle("Add", for: .normal)
         } else {
             addEditButton.setTitle("Edit", for: .normal)
         }
-        //addUpdateButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         addEditButton.layer.cornerRadius = 5
         addEditButton.backgroundColor = .iceBlue
         addEditButton.setTitleColor(.white, for: .normal)
-        //changePasswordButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
-        changePasswordButton.layer.cornerRadius = 5
-        changePasswordButton.backgroundColor = .white
-        changePasswordButton.setTitleColor(.black, for: .normal)
-        //logOutButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
-        logOutButton.layer.cornerRadius = 5
-        logOutButton.backgroundColor = .white
-        logOutButton.setTitleColor(.black, for: .normal)
-        //deleteAccountButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
-        deleteAccountButton.layer.cornerRadius = 5
-        deleteAccountButton.backgroundColor = .lavaRed
-        deleteAccountButton.setTitleColor(.white, for: .normal)
+//        changePasswordButton.layer.cornerRadius = 5
+//        changePasswordButton.backgroundColor = .white
+//        changePasswordButton.setTitleColor(.black, for: .normal)
+//        logOutButton.layer.cornerRadius = 5
+//        logOutButton.backgroundColor = .white
+//        logOutButton.setTitleColor(.black, for: .normal)
+//        deleteAccountButton.layer.cornerRadius = 5
+//        deleteAccountButton.backgroundColor = .lavaRed
+        deleteAccountButton.setTitleColor(.lavaRed, for: .normal)
+        // Remove border on text field
+        firstNameTextField.borderStyle = .none
+        emailTextField.borderStyle = .none
+        phoneNumberTextField.borderStyle = .none
+        // Change placeholder text and color
+        firstNameTextField.attributedPlaceholder = NSAttributedString(string: "...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        phoneNumberTextField.attributedPlaceholder = NSAttributedString(string: "...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         let barButton = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.setRightBarButton(barButton, animated: true)
     }
@@ -87,7 +75,7 @@ class SettingsViewController: UIViewController {
         PersonController.sharedInstance.initializeUser(fireBaseUID: id) { (success) in
             if success {
                 guard let user = PersonController.sharedInstance.currentUser else { return }
-                self.phoneNumberLabel.text = user.phoneNumber
+                self.phoneNumberTextField.text = user.phoneNumber
                 if user.phoneNumber == "" {
                     self.addEditButton.setTitle("Add", for: .normal)
                 } else {
@@ -99,6 +87,11 @@ class SettingsViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func changePasswordButtonTapped(_ sender: Any) {

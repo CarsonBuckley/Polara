@@ -28,6 +28,7 @@ class ResortTableViewCell: UITableViewCell {
         resortNameLabel.text = resort.name
         resortLocationLabel.text = "\(resort.location), \(resort.state)"
         resortImage.image = UIImage(named: "\(resort.name) Cell")
+        temperatureLabel.textColor = .systemBlue
         distanceLabel.isHidden = true
         
         ResortController.sharedInstance.fetchTemperature(with: resort.coordinates, units: ResortController.sharedInstance.units, language: ResortController.sharedInstance.language, format: ResortController.sharedInstance.format, apiKey: ResortController.sharedInstance.apiKey) { (temperature) in

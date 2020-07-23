@@ -29,7 +29,6 @@ class SplashScreenViewController: UIViewController {
                 if success {
                     print("SUCCESS LOGGING IN USER ✅✅✅✅✅")
                     let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBar")
-                    
                     // Line below is important after iOS 13 update. It allows the current Modal View controller [SplashScreenViewController] to segue to desination VC [MenuViewController] without making the destinationVC present Modally
                     mainVC.modalPresentationStyle = .fullScreen
                     self.present(mainVC, animated: true)

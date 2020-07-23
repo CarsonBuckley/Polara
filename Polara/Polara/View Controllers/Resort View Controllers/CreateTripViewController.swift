@@ -48,8 +48,8 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         createTripButton.layer.cornerRadius = 5
-        createTripButton.setTitleColor(.black, for: .normal)
-        createTripButton.backgroundColor = .white
+        createTripButton.setTitleColor(.white, for: .normal)
+        createTripButton.backgroundColor = .iceBlue
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = .date
         let contactCellNib = UINib(nibName: "ContactCell", bundle: nil)
@@ -81,7 +81,7 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = self.view.frame.height / 6
+        let height = self.view.frame.height / 5
         return height
     }
     

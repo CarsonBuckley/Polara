@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var addContactButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -67,7 +67,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = self.view.frame.height / 6
+        let height = self.view.frame.height / 5
         return height
     }
     
@@ -93,7 +93,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
      }
 }
 
-extension ContactsViewController: ContactTableViewCellDelegate {
+extension FriendsViewController: ContactTableViewCellDelegate {
     
     func buttonTapped(contact: Person, sender: ContactTableViewCell) {
         guard let user = PersonController.sharedInstance.currentUser else { return }

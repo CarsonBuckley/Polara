@@ -41,6 +41,7 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         resortImage.layer.cornerRadius = 10
         resortLocationLabel.text = "\(resort.location), \(resort.state)"
         resortLocationLabel.textColor = .white
+        temperatureLabel.textColor = .iceBlue
         distanceLabel.isHidden = true
 //        distanceLabel.text = "0000 mi"
         elevationLabel.text = "Elevation: \(resort.elevation) ft"
@@ -50,9 +51,10 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         mapsButton.setTitleColor(.white, for: .normal)
         mapsButton.backgroundColor = .iceBlue
         websiteButton.setTitle("\(resort.websiteNameFormat)", for: .normal)
+        websiteButton.titleLabel?.textColor = .iceBlue
         createTripButton.layer.cornerRadius = 5
-        createTripButton.setTitleColor(.black, for: .normal)
-        createTripButton.backgroundColor = .white
+        createTripButton.setTitleColor(.white, for: .normal)
+        createTripButton.backgroundColor = .iceBlue
         
         self.locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {

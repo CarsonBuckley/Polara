@@ -34,7 +34,7 @@ class PhoneNumberViewController: UIViewController, UITextFieldDelegate {
         formatKeyboard()
         phoneNumberTextField.delegate = self
         guard let user = PersonController.sharedInstance.currentUser else { return }
-        phoneNumberTextField.font = UIFont(name: "Roboto-Bold", size: 17)
+//        phoneNumberTextField.font = UIFont(name: "Roboto-Bold", size: 17)
         phoneNumberTextField.text = user.phoneNumber
         //saveButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
         saveButton.layer.cornerRadius = 5

@@ -13,7 +13,7 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var referralCodeStackView: UIStackView!
     @IBOutlet weak var referralCodeLabel: UILabel!
-    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
@@ -23,18 +23,18 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let user = PersonController.sharedInstance.currentUser else { return }
-        profilePicture.layer.borderWidth = 3
-        profilePicture.layer.borderColor = UIColor(ciColor: .white).cgColor
-        profilePicture.layer.cornerRadius = profilePicture.frame.height / 2
+        profileImage.layer.borderWidth = 3
+        profileImage.layer.borderColor = UIColor(ciColor: .white).cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
         nameLabel.text = user.name
         emailLabel.text = user.email
         phoneNumberLabel.text = user.phoneNumber
         friendsButton.layer.cornerRadius = 5
-        friendsButton.backgroundColor = .white
-        friendsButton.setTitleColor(.black, for: .normal)
+        friendsButton.backgroundColor = .iceBlue
+        friendsButton.setTitleColor(.white, for: .normal)
         notificationsButton.layer.cornerRadius = 5
-        notificationsButton.backgroundColor = .white
-        notificationsButton.setTitleColor(.black, for: .normal)
+        notificationsButton.backgroundColor = .iceBlue
+        notificationsButton.setTitleColor(.white, for: .normal)
 //        notificationsButton.isHidden = true
         referralCodeStackView.isHidden = true
         

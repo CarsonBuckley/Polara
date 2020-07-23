@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,24 +16,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Polara Logo" translatesAutoresizingMaskIntoConstraints="NO" id="CER-kZ-ftV">
-                                <rect key="frame" x="87" y="172" width="240" height="128"/>
+                                <rect key="frame" x="87" y="398" width="240" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="mcg-uq-fsc"/>
+                                    <constraint firstAttribute="height" constant="100" id="mcg-uq-fsc"/>
                                     <constraint firstAttribute="width" constant="240" id="q3t-MO-Mbl"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yiz-dW-ZWn">
-                                <rect key="frame" x="116.5" y="696.5" width="181.5" height="37.5"/>
+                                <rect key="frame" x="143.5" y="804" width="127.5" height="34"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a product by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sse-Rt-Fl9">
-                                        <rect key="frame" x="57.5" y="0.0" width="66.5" height="13.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="developed by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sse-Rt-Fl9">
+                                        <rect key="frame" x="28.5" y="0.0" width="70.5" height="13.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARSON BUCKLEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rb5-SF-gPS">
-                                        <rect key="frame" x="0.0" y="13.5" width="181.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carson Buckley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rb5-SF-gPS">
+                                        <rect key="frame" x="0.0" y="13.5" width="127.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -44,8 +44,8 @@
                         <constraints>
                             <constraint firstItem="Yiz-dW-ZWn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="A0w-fH-Vmz"/>
                             <constraint firstItem="CER-kZ-ftV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DEp-fX-jUF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yiz-dW-ZWn" secondAttribute="bottom" constant="128" id="dWg-4P-E12"/>
-                            <constraint firstItem="CER-kZ-ftV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="nPi-9B-mEX"/>
+                            <constraint firstItem="CER-kZ-ftV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Mia-3h-zzg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yiz-dW-ZWn" secondAttribute="bottom" constant="24" id="dWg-4P-E12"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddContactViewController: UIViewController, UITextFieldDelegate {
+class AddFriendViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var phoneNumberTextfield: UITextField!
     @IBOutlet weak var saveButton: UIButton!

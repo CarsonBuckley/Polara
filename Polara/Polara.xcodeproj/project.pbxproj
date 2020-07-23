@@ -10,7 +10,7 @@
 		157ED76FC7B8C2B8ABFBE4E4 /* Pods_Polara.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1B8EDD61EF4472557A23D8 /* Pods_Polara.framework */; };
 		B917147822874C1000780310 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B917147722874C1000780310 /* GoogleService-Info.plist */; };
 		B917147A22875A7600780310 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917147922875A7600780310 /* PersonController.swift */; };
-		B92C04FB228DF2A200ABA42D /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C04FA228DF2A200ABA42D /* AddContactViewController.swift */; };
+		B92C04FB228DF2A200ABA42D /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C04FA228DF2A200ABA42D /* AddFriendViewController.swift */; };
 		B92C04FF228DF33000ABA42D /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C04FE228DF33000ABA42D /* NotificationsTableViewController.swift */; };
 		B92C0501228DF37900ABA42D /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C0500228DF37900ABA42D /* CreateTripViewController.swift */; };
 		B92C0506228E044400ABA42D /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C0505228E044400ABA42D /* ContactTableViewCell.swift */; };
@@ -23,7 +23,7 @@
 		B93AF03E22EF9734009A91BF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AF03D22EF9734009A91BF /* DateFormatter.swift */; };
 		B95B96FC243D03BC00920350 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B96FB243D03BC00920350 /* LabelViewController.swift */; };
 		B95CF4F8228B3F050050CE0F /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95CF4F7228B3F050050CE0F /* SplashScreenViewController.swift */; };
-		B9629983229321A400FFF94A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9629982229321A400FFF94A /* ContactsViewController.swift */; };
+		B9629983229321A400FFF94A /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9629982229321A400FFF94A /* FriendsViewController.swift */; };
 		B967734D228E2D440020E398 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967734C228E2D440020E398 /* CreateAccountViewController.swift */; };
 		B967734F228E44560020E398 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967734E228E44560020E398 /* DeleteAccountViewController.swift */; };
 		B9677351228E4BFB0020E398 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9677350228E4BFB0020E398 /* PhoneNumberViewController.swift */; };
@@ -72,7 +72,7 @@
 		5D1B8EDD61EF4472557A23D8 /* Pods_Polara.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Polara.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B917147722874C1000780310 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B917147922875A7600780310 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
-		B92C04FA228DF2A200ABA42D /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		B92C04FA228DF2A200ABA42D /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		B92C04FE228DF33000ABA42D /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		B92C0500228DF37900ABA42D /* CreateTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
 		B92C0505228E044400ABA42D /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		B93AF03D22EF9734009A91BF /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		B95B96FB243D03BC00920350 /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		B95CF4F7228B3F050050CE0F /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
-		B9629982229321A400FFF94A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B9629982229321A400FFF94A /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		B967734C228E2D440020E398 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B967734E228E44560020E398 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
 		B9677350228E4BFB0020E398 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
@@ -428,8 +428,8 @@
 				B9C37C6B2289153700F15788 /* SettingsViewController.swift */,
 				B9677350228E4BFB0020E398 /* PhoneNumberViewController.swift */,
 				B967734E228E44560020E398 /* DeleteAccountViewController.swift */,
-				B9629982229321A400FFF94A /* ContactsViewController.swift */,
-				B92C04FA228DF2A200ABA42D /* AddContactViewController.swift */,
+				B9629982229321A400FFF94A /* FriendsViewController.swift */,
+				B92C04FA228DF2A200ABA42D /* AddFriendViewController.swift */,
 				B92C04FE228DF33000ABA42D /* NotificationsTableViewController.swift */,
 				B95B96FB243D03BC00920350 /* LabelViewController.swift */,
 			);
@@ -614,7 +614,7 @@
 				B9AFE8232288C10100BD0EC7 /* PassViewController.swift in Sources */,
 				B98E80CB2287C2C60077C50A /* PolaraButton.swift in Sources */,
 				B985C4F4229C95AB00BB4E5E /* TripController.swift in Sources */,
-				B92C04FB228DF2A200ABA42D /* AddContactViewController.swift in Sources */,
+				B92C04FB228DF2A200ABA42D /* AddFriendViewController.swift in Sources */,
 				B92C0510228E0B0500ABA42D /* LoginViewController.swift in Sources */,
 				B92C0501228DF37900ABA42D /* CreateTripViewController.swift in Sources */,
 				B971873F228690AB00CF1010 /* Resort.swift in Sources */,
@@ -628,7 +628,7 @@
 				B98E80CD2287C2D60077C50A /* robotoBoldLabel.swift in Sources */,
 				B93AF03E22EF9734009A91BF /* DateFormatter.swift in Sources */,
 				B971873B22868F8100CF1010 /* ResortTableViewCell.swift in Sources */,
-				B9629983229321A400FFF94A /* ContactsViewController.swift in Sources */,
+				B9629983229321A400FFF94A /* FriendsViewController.swift in Sources */,
 				B9C37C722289275400F15788 /* LodgingViewController.swift in Sources */,
 				B9718741228690DD00CF1010 /* ResortController.swift in Sources */,
 				B92C050A228E069D00ABA42D /* TripContactsViewController.swift in Sources */,

@@ -35,7 +35,7 @@ class NotificationsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = self.view.frame.height / 6
+        let height = self.view.frame.height / 5
         return height
     }
     
