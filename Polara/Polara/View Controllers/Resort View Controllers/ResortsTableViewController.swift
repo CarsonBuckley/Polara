@@ -72,15 +72,17 @@ class ResortsTableViewController: UITableViewController, CLLocationManagerDelega
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = self.view.frame.height / 5
-        return height
+//        let height = self.view.frame.height / 5
+        let height = 90
+        return CGFloat(height)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resortCell", for: indexPath) as! ResortTableViewCell
         
         let resort = ResortController.sharedInstance.resorts[indexPath.row]
-        cell.resortImage.layer.cornerRadius = cell.resortImage.frame.height / 2
+        cell.resortImage.layer.cornerRadius = 10
+//        cell.resortImage.layer.cornerRadius = cell.resortImage.frame.height / 2
         cell.resort = resort
         
         return cell

@@ -41,7 +41,7 @@ class ContactTableViewCell: UITableViewCell {
                 cellButton.setTitle(title, for: .normal)
                 cellButton.layer.borderColor = borderColor.cgColor
             } else {
-                cellButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                cellButton.layer.borderColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
                 var title: String
                 if self.status == .block {
                     title = "Block"
@@ -60,7 +60,7 @@ class ContactTableViewCell: UITableViewCell {
                 cellButton.setTitle(title, for: .normal)
                 cellButton.layer.borderColor = borderColor.cgColor
             } else {
-                cellButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                cellButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 var title: String
                 if self.status == .invite {
                     title = "Invite"

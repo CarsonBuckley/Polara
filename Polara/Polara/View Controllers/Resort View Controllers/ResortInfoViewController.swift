@@ -40,7 +40,7 @@ class ResortInfoViewController: UIViewController, CLLocationManagerDelegate {
         resortImage.image = UIImage(named: "\(resort.name) Cover")
         resortImage.layer.cornerRadius = 10
         resortLocationLabel.text = "\(resort.location), \(resort.state)"
-        resortLocationLabel.textColor = .white
+//        resortLocationLabel.textColor = .white
         temperatureLabel.textColor = .iceBlue
         distanceLabel.isHidden = true
 //        distanceLabel.text = "0000 mi"

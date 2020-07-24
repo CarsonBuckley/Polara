@@ -24,7 +24,7 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         guard let user = PersonController.sharedInstance.currentUser else { return }
         profileImage.layer.borderWidth = 3
-        profileImage.layer.borderColor = UIColor(ciColor: .white).cgColor
+        profileImage.layer.borderColor = UIColor.profilePictureBackground.cgColor
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         nameLabel.text = user.name
         emailLabel.text = user.email
@@ -54,6 +54,7 @@ class AccountViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        profileImage.layer.borderColor = UIColor.profilePictureBackground.cgColor
         guard let id = Auth.auth().currentUser?.uid else { return }
         PersonController.sharedInstance.initializeUser(fireBaseUID: id) { (success) in
             if success {

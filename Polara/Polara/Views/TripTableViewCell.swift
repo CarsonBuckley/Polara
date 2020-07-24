@@ -31,7 +31,7 @@ class TripTableViewCell: UITableViewCell {
         guard let trip = trip else { return }        
         resortNameLabel.text = trip.resortName
         resortLocationLabel.text = "\(trip.resortLocation), \(trip.resortState)"
-        resortLocationLabel.textColor = .white
+//        resortLocationLabel.textColor = .white
         dateOfTripLabel.text = Date(timeIntervalSince1970: trip.date).stringWith(dateStyle: .medium, timeStyle: .none)
     }
     

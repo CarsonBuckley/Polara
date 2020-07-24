@@ -50,7 +50,7 @@ class CreateTripViewController: UIViewController, UITableViewDelegate, UITableVi
         createTripButton.layer.cornerRadius = 5
         createTripButton.setTitleColor(.white, for: .normal)
         createTripButton.backgroundColor = .iceBlue
-        datePicker.setValue(UIColor.white, forKey: "textColor")
+//        datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = .date
         let contactCellNib = UINib(nibName: "ContactCell", bundle: nil)
         tableView.register(contactCellNib, forCellReuseIdentifier: "contactCell")
