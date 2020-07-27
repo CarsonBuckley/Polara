@@ -1,9 +1,9 @@
 # Polara
 Personal project to track skiing and snowboarding trips with your friends
 
-https://user-images.githubusercontent.com/45154466/88511070-705c4180-cfa1-11ea-8f29-eeefdbfe6e5e.png
-https://user-images.githubusercontent.com/45154466/88511206-b1545600-cfa1-11ea-8ec0-23561c068b31.png
-https://user-images.githubusercontent.com/45154466/88511203-b0232900-cfa1-11ea-9560-86c4da768c9d.png
+https://user-images.githubusercontent.com/45154466/88511070-705c4180-cfa1-11ea-8f29-eeefdbfe6e5e.png?raw=true
+https://user-images.githubusercontent.com/45154466/88511206-b1545600-cfa1-11ea-8ec0-23561c068b31.png?raw=true
+https://user-images.githubusercontent.com/45154466/88511203-b0232900-cfa1-11ea-9560-86c4da768c9d.png?raw=true
 
 Below is the function I wrote to fetch temperatures for ski resorts based off of their coordinates. The above screenshots are how I visually displayed the data to the user after calling the function for each View Controller.
 
