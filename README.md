@@ -3,7 +3,7 @@
 Polara is a cloud-enabled app designed to create and track skiing and snowboarding trips with your friends
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/45154466/88511206-b1545600-cfa1-11ea-8ec0-23561c068b31.png" alt="Resorts Table View" style="float: left; margin-right: 10px;" height="700"/> <img src="https://user-images.githubusercontent.com/45154466/88511203-b0232900-cfa1-11ea-9560-86c4da768c9d.png" alt="Snowbasin" style="float: left; margin-right: 10px;" height="700"/>
+<img src="https://user-images.githubusercontent.com/45154466/88515628-3abb5680-cfa9-11ea-8f06-0e973d5bf2b7.png" alt="Resorts Table View" style="float: center; margin-right: 10px;" height="700"/> <img src="https://user-images.githubusercontent.com/45154466/88515758-6fc7a900-cfa9-11ea-9dd3-fdd574d828a3.png" alt="Beaver Creek" style="float: center; margin-right: 10px;" height="700"/>
 
 - Below is the function I wrote to fetch temperatures for ski resorts based off of their coordinates. The above screenshots are how I visually displayed the data to the user after calling the function for each View Controller.
 
